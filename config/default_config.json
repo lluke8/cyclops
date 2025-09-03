@@ -1,0 +1,63 @@
+{
+  "application": {
+    "name": "Cyclops",
+    "version": "1.0.0",
+    "debug_mode": false,
+    "log_level": "INFO"
+  },
+  "screen_capture": {
+    "default_region": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "capture_fps": 10,
+    "save_screenshots": false
+  },
+  "ocr": {
+    "tesseract_path": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "language": "eng",
+    "confidence_threshold": 0.7
+  },
+  "computer_vision": {
+    "template_matching_threshold": 0.8,
+    "max_matches": 10,
+    "scale_factors": [0.8, 0.9, 1.0, 1.1, 1.2]
+  },
+  "input_simulation": {
+    "mouse_speed": 0.5,
+    "key_press_duration": 0.1,
+    "fail_safe_enabled": true,
+    "fail_safe_position": [0, 0]
+  },
+  "automation": {
+    "rune_creation": {
+      "enabled": false,
+      "item_template_path": "assets/templates/rune_item.png",
+      "target_position": [500, 300],
+      "hotkey": "f1"
+    },
+    "food_eating": {
+      "enabled": false,
+      "food_position": [100, 100],
+      "cooldown_seconds": 5
+    },
+    "health_monitoring": {
+      "enabled": false,
+      "health_bar_region": {
+        "x": 50,
+        "y": 50,
+        "width": 200,
+        "height": 20
+      },
+      "low_health_threshold": 0.3,
+      "emergency_hotkey": "f2"
+    }
+  },
+  "gui": {
+    "window_size": [800, 600],
+    "theme": "default",
+    "auto_save_config": true
+  }
+}
