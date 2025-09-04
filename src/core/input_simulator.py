@@ -72,9 +72,37 @@ class InputSimulator:
             self.logger.error(f"Click failed: {e}")
             return False
     
-    def right_click(self, x: int, y: int) -> bool:
-        """Perform right click at specified coordinates"""
-        return self.click(x, y, button='right')
+    def right_click(self, x: int = None, y: int = None) -> bool:
+        """
+        Perform right click at specified coordinates or current position
+        
+        Args:
+            x: X coordinate (None for current position)
+            y: Y coordinate (None for current position)
+        """
+        if x is not None and y is not None:
+            return self.click(x, y, button='right')
+        else:
+            # Click at current mouse position
+            return self.click_at_current_position(button='right')
+    
+    def click_at_current_position(self, button: str = 'left', clicks: int = 1) -> bool:
+        """
+        Click at current mouse position without moving
+        
+        Args:
+            button: Mouse button ('left', 'right', 'middle')
+            clicks: Number of clicks
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            pyautogui.click(button=button, clicks=clicks)
+            return True
+        except Exception as e:
+            self.logger.error(f"Click at current position failed: {e}")
+            return False
     
     def double_click(self, x: int, y: int) -> bool:
         """Perform double click at specified coordinates"""

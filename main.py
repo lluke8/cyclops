@@ -44,7 +44,7 @@ def check_dependencies():
     
     if missing_modules:
         error_msg = f"Missing required modules: {', '.join(missing_modules)}\n"
-        error_msg += "Please install them using: py -m pip install -r requirements.txt"
+        error_msg += "Please install them using: python -m pip install -r requirements.txt"
         messagebox.showerror("Missing Dependencies", error_msg)
         return False
     

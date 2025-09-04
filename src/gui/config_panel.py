@@ -189,9 +189,6 @@ class ConfigPanel:
         self.config_vars['health_threshold'] = tk.StringVar()
         ttk.Entry(health_frame, textvariable=self.config_vars['health_threshold'], width=10).pack(anchor=tk.W, padx=5, pady=2)
         
-        ttk.Label(health_frame, text="Emergency Hotkey:").pack(anchor=tk.W, padx=5)
-        self.config_vars['health_hotkey'] = tk.StringVar()
-        ttk.Entry(health_frame, textvariable=self.config_vars['health_hotkey'], width=10).pack(anchor=tk.W, padx=5, pady=2)
     
     def _create_advanced_tab(self):
         """Create advanced configuration tab"""
@@ -264,7 +261,6 @@ class ConfigPanel:
             self.config_vars['food_cooldown'].set(str(self.config_manager.get('automation.food_eating.cooldown_seconds', 5)))
             self.config_vars['health_enabled'].set(self.config_manager.get('automation.health_monitoring.enabled', False))
             self.config_vars['health_threshold'].set(str(int(self.config_manager.get('automation.health_monitoring.low_health_threshold', 0.3) * 100)))
-            self.config_vars['health_hotkey'].set(self.config_manager.get('automation.health_monitoring.emergency_hotkey', 'f2'))
             
             # Advanced settings
             self.config_vars['mouse_speed'].set(str(self.config_manager.get('input_simulation.mouse_speed', 0.5)))
@@ -311,7 +307,6 @@ class ConfigPanel:
             self.config_manager.set('automation.health_monitoring.enabled', self.config_vars['health_enabled'].get())
             self.config_manager.set('automation.health_monitoring.low_health_threshold', 
                                   int(self.config_vars['health_threshold'].get()) / 100)
-            self.config_manager.set('automation.health_monitoring.emergency_hotkey', self.config_vars['health_hotkey'].get())
             
             # Advanced settings
             self.config_manager.set('input_simulation.mouse_speed', float(self.config_vars['mouse_speed'].get()))

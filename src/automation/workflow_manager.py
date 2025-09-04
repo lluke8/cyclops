@@ -46,6 +46,14 @@ class WorkflowManager:
         self.active_workflows: List[str] = []
         self.workflow_threads: Dict[str, threading.Thread] = {}
         
+        # Process coordination
+        self.process_lock = threading.Lock()
+        self.active_process = None  # 'rune_creation' or 'food_eating' or None
+        self.pending_processes = []  # Queue of processes waiting to run
+        
+        # Callbacks for automation events
+        self.automation_callbacks: Dict[str, List[Callable]] = {}
+        
         # Workflow definitions
         self.workflows: Dict[str, Dict[str, Any]] = {}
         self._define_default_workflows()
@@ -193,11 +201,20 @@ class WorkflowManager:
                     automation = self.automations[automation_name]
                     automation.stop_automation()
                     
-                    # Wait for thread to finish
+                    # Wait for thread to finish (with better error handling)
                     if automation_name in self.workflow_threads:
                         thread = self.workflow_threads[automation_name]
-                        thread.join(timeout=2.0)
-                        del self.workflow_threads[automation_name]
+                        try:
+                            # Check if we're not trying to join the current thread
+                            if thread != threading.current_thread():
+                                thread.join(timeout=2.0)
+                            else:
+                                self.logger.warning(f"Skipping thread join for {automation_name} - current thread")
+                        except Exception as thread_error:
+                            self.logger.warning(f"Thread join failed for {automation_name}: {thread_error}")
+                        finally:
+                            # Always clean up the thread reference
+                            del self.workflow_threads[automation_name]
                     
                     self.logger.info(f"Stopped automation: {automation_name}")
             
@@ -213,6 +230,14 @@ class WorkflowManager:
             
         except Exception as e:
             self.logger.error(f"Failed to stop workflow '{workflow_name}': {e}")
+            # Even if stopping failed, clean up the workflow state
+            try:
+                if workflow_name in self.active_workflows:
+                    self.active_workflows.remove(workflow_name)
+                if not self.active_workflows:
+                    self.is_running = False
+            except:
+                pass
             return False
     
     def stop_all_workflows(self):
@@ -235,9 +260,47 @@ class WorkflowManager:
         """
         try:
             self.logger.info(f"Running automation: {automation_name}")
+            
+            # Notify callbacks that automation is starting
+            self._notify_callbacks(automation_name, 'started')
+            
             automation.start_automation()
+            
+            # Notify callbacks that automation has stopped
+            self._notify_callbacks(automation_name, 'stopped')
+            
         except Exception as e:
             self.logger.error(f"Automation '{automation_name}' failed: {e}")
+            self._notify_callbacks(automation_name, 'error', str(e))
+    
+    def register_callback(self, automation_name: str, callback: Callable):
+        """
+        Register a callback for automation events
+        
+        Args:
+            automation_name: Name of the automation to monitor
+            callback: Callback function (automation_name, event, *args)
+        """
+        if automation_name not in self.automation_callbacks:
+            self.automation_callbacks[automation_name] = []
+        self.automation_callbacks[automation_name].append(callback)
+        self.logger.info(f"Registered callback for {automation_name}")
+    
+    def _notify_callbacks(self, automation_name: str, event: str, *args):
+        """
+        Notify all callbacks for an automation event
+        
+        Args:
+            automation_name: Name of the automation
+            event: Event type ('started', 'stopped', 'error')
+            *args: Additional arguments
+        """
+        if automation_name in self.automation_callbacks:
+            for callback in self.automation_callbacks[automation_name]:
+                try:
+                    callback(automation_name, event, *args)
+                except Exception as e:
+                    self.logger.error(f"Callback error for {automation_name}: {e}")
     
     def get_workflow_status(self, workflow_name: str) -> Dict[str, Any]:
         """
@@ -387,6 +450,100 @@ class WorkflowManager:
             List of automation names
         """
         return list(self.automations.keys())
+    
+    def get_automation(self, automation_name: str) -> Optional[Any]:
+        """
+        Get a specific automation instance
+        
+        Args:
+            automation_name: Name of the automation to retrieve
+            
+        Returns:
+            Automation instance if found, None otherwise
+        """
+        return self.automations.get(automation_name)
+    
+    def request_process_access(self, process_name: str) -> bool:
+        """
+        Request access to run a process (rune_creation or food_eating)
+        
+        Args:
+            process_name: Name of the process requesting access
+            
+        Returns:
+            True if access granted, False if denied
+        """
+        with self.process_lock:
+            if self.active_process is None:
+                # No process is running, grant access
+                self.active_process = process_name
+                self.logger.info(f"Process access granted to: {process_name}")
+                return True
+            elif self.active_process == process_name:
+                # Same process is already running, grant access
+                return True
+            else:
+                # Another process is running, queue this one
+                if process_name not in self.pending_processes:
+                    self.pending_processes.append(process_name)
+                    self.logger.info(f"Process {process_name} queued, {self.active_process} is active")
+                return False
+    
+    def release_process_access(self, process_name: str):
+        """
+        Release process access and start next queued process
+        
+        Args:
+            process_name: Name of the process releasing access
+        """
+        with self.process_lock:
+            if self.active_process == process_name:
+                self.active_process = None
+                self.logger.info(f"Process access released by: {process_name}")
+                
+                # Start next queued process if any
+                if self.pending_processes:
+                    next_process = self.pending_processes.pop(0)
+                    self.active_process = next_process
+                    self.logger.info(f"Started queued process: {next_process}")
+                    
+                    # Trigger the queued process to run immediately
+                    self._trigger_queued_process(next_process)
+    
+    def _trigger_queued_process(self, process_name: str):
+        """
+        Trigger a queued process to run immediately
+        
+        Args:
+            process_name: Name of the process to trigger
+        """
+        try:
+            if process_name == 'rune_creation':
+                rune_automation = self.get_automation('rune_creation')
+                if rune_automation and rune_automation.is_running:
+                    # Force immediate execution
+                    rune_automation.next_create_time = 0
+            elif process_name == 'food_eating':
+                food_automation = self.get_automation('food_eating')
+                if food_automation and food_automation.is_running:
+                    # Force immediate execution
+                    food_automation.next_eat_time = 0
+        except Exception as e:
+            self.logger.error(f"Failed to trigger queued process {process_name}: {e}")
+    
+    def get_process_status(self) -> Dict[str, Any]:
+        """
+        Get current process coordination status
+        
+        Returns:
+            Dictionary with process status information
+        """
+        with self.process_lock:
+            return {
+                'active_process': self.active_process,
+                'pending_processes': self.pending_processes.copy(),
+                'queue_length': len(self.pending_processes)
+            }
 
 class WorkflowManagerError(Exception):
     """Custom exception for workflow manager errors"""

@@ -23,40 +23,91 @@
   "computer_vision": {
     "template_matching_threshold": 0.8,
     "max_matches": 10,
-    "scale_factors": [0.8, 0.9, 1.0, 1.1, 1.2]
+    "scale_factors": [
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2
+    ]
   },
   "input_simulation": {
     "mouse_speed": 0.5,
     "key_press_duration": 0.1,
     "fail_safe_enabled": true,
-    "fail_safe_position": [0, 0]
+    "fail_safe_position": [
+      0,
+      0
+    ]
   },
   "automation": {
     "rune_creation": {
       "enabled": false,
-      "item_template_path": "assets/templates/rune_item.png",
-      "target_position": [500, 300],
-      "hotkey": "f1"
+      "rune_positions": [
+        [
+          1690,
+          423
+        ],
+        [
+          1693,
+          418
+        ],
+        [
+          1699,
+          423
+        ]
+      ],
+      "min_delay_minutes": 2.0,
+      "max_delay_minutes": 5.0,
+      "hotkey": "f6",
+      "search_region": {
+        "x": 1524,
+        "y": 215,
+        "width": 147,
+        "height": 189
+      }
     },
     "food_eating": {
       "enabled": false,
-      "food_position": [100, 100],
+      "food_positions": [
+        [
+          1692,
+          745
+        ],
+        [
+          1693,
+          743
+        ],
+        [
+          1697,
+          742
+        ]
+      ],
+      "min_clicks": 3,
+      "max_clicks": 6,
+      "min_delay_minutes": 4.0,
+      "max_delay_minutes": 8.0,
       "cooldown_seconds": 5
     },
     "health_monitoring": {
-      "enabled": false,
+      "enabled": true,
       "health_bar_region": {
-        "x": 50,
-        "y": 50,
-        "width": 200,
-        "height": 20
+        "x": 1670,
+        "y": 665,
+        "width": 124,
+        "height": 43
       },
-      "low_health_threshold": 0.3,
-      "emergency_hotkey": "f2"
+      "low_health_threshold": 0.5,
+      "emergency_hotkey": "f2",
+      "max_health": 800,
+      "max_mana": 200
     }
   },
   "gui": {
-    "window_size": [800, 600],
+    "window_size": [
+      800,
+      600
+    ],
     "theme": "default",
     "auto_save_config": true
   }
