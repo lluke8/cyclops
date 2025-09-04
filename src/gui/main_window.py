@@ -162,6 +162,20 @@ class CyclopsMainWindow:
                                         font=('Arial', 12, 'bold'), foreground='blue')
         self.countdown_label.pack(side=tk.LEFT)
         
+        # Manual execution buttons frame
+        execute_buttons_frame = ttk.Frame(control_frame)
+        execute_buttons_frame.pack(pady=10)
+        
+        # Execute Food Now button
+        self.execute_food_button = ttk.Button(execute_buttons_frame, text="Execute Food Now", 
+                                            command=self._execute_food_now)
+        self.execute_food_button.pack(side=tk.LEFT, padx=5)
+        
+        # Execute Rune Now button  
+        self.execute_rune_button = ttk.Button(execute_buttons_frame, text="Execute Rune Now", 
+                                            command=self._execute_rune_now)
+        self.execute_rune_button.pack(side=tk.LEFT, padx=5)
+        
         # Configure button styles
         style = ttk.Style()
         style.configure('Active.TButton', font=('Arial', 14, 'bold'))
@@ -1109,6 +1123,68 @@ class CyclopsMainWindow:
             
         except Exception as e:
             self.logger.error(f"Failed to handle emergency stop: {e}")
+
+    def _execute_food_now(self):
+        """Execute food eating immediately without affecting timer"""
+        try:
+            food_automation = self.workflow_manager.get_automation('food_eating')
+            if not food_automation:
+                self.logger.error("Food eating automation not available")
+                messagebox.showerror("Error", "Food eating automation not available")
+                return
+            
+            # Check if food positions are configured
+            positions = food_automation.get_food_positions()
+            if not positions:
+                self.logger.warning("No food positions configured")
+                messagebox.showwarning("Warning", "No food positions configured. Please set up food positions first.")
+                return
+            
+            # Execute food eating sequence immediately (this doesn't affect the timer)
+            self.logger.info("Manual food execution triggered")
+            success = food_automation._eat_food_sequence()
+            
+            if success:
+                self.logger.info("Manual food execution completed successfully")
+                self._log_status("Food executed manually")
+            else:
+                self.logger.error("Manual food execution failed")
+                self._log_status("Manual food execution failed")
+                
+        except Exception as e:
+            self.logger.error(f"Failed to execute food manually: {e}")
+            messagebox.showerror("Error", f"Failed to execute food: {e}")
+    
+    def _execute_rune_now(self):
+        """Execute rune creation immediately without affecting timer"""
+        try:
+            rune_automation = self.workflow_manager.get_automation('rune_creation')
+            if not rune_automation:
+                self.logger.error("Rune creation automation not available")
+                messagebox.showerror("Error", "Rune creation automation not available")
+                return
+            
+            # Check if rune positions are configured
+            positions = rune_automation.get_rune_positions()
+            if not positions:
+                self.logger.warning("No rune positions configured")
+                messagebox.showwarning("Warning", "No rune positions configured. Please set up rune positions first.")
+                return
+            
+            # Execute rune creation sequence immediately (this doesn't affect the timer)
+            self.logger.info("Manual rune creation triggered")
+            success = rune_automation._create_rune_sequence()
+            
+            if success:
+                self.logger.info("Manual rune creation completed successfully")
+                self._log_status("Rune created manually")
+            else:
+                self.logger.error("Manual rune creation failed")
+                self._log_status("Manual rune creation failed")
+                
+        except Exception as e:
+            self.logger.error(f"Failed to execute rune creation manually: {e}")
+            messagebox.showerror("Error", f"Failed to execute rune creation: {e}")
 
     def _on_closing(self):
         """Handle window closing"""
