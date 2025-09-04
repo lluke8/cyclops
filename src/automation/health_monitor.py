@@ -11,6 +11,7 @@ from core.input_simulator import InputSimulator
 from core.state_monitor import StateMonitor
 from utils.timing import TimingUtils
 from utils.config_manager import ConfigManager
+from utils.resource_loader import find_resource, get_image_path
 
 class HealthMonitorAutomation:
     """Health monitoring automation with emergency response"""
@@ -154,9 +155,11 @@ class HealthMonitorAutomation:
             self.logger.info(f"  Low health threshold: {low_health_threshold:.1%}")
             self.logger.info(f"  Max health: {max_health}")
             
-            # Create image search-based health monitor
+            # Create image search-based health monitor using resource path resolver
+            health_image_path = self.config_manager.get('automation.health_monitoring.health_bar_image', 'health_reference.png')
+            resolved_health_path = find_resource(health_image_path) or get_image_path(health_image_path)
             self.health_condition_name = self.state_monitor.create_image_search_monitor(
-                health_region, 'health_reference.png', 0.8
+                health_region, resolved_health_path, 0.8
             )
             
             self.logger.info(f"Setup health monitoring with condition: {self.health_condition_name}")

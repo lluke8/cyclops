@@ -45,27 +45,36 @@
       "enabled": false,
       "rune_positions": [
         [
-          1690,
-          423
+          1584,
+          437
         ],
         [
-          1693,
-          418
+          1591,
+          437
         ],
         [
-          1699,
-          423
+          1595,
+          441
         ]
       ],
       "min_delay_minutes": 2.0,
       "max_delay_minutes": 5.0,
       "hotkey": "f6",
+      "ensure_focus": true,
+      "ensure_vm_focus": true,
+      "target_window_name": "VMware Workstation",
+      "window_focus_enabled": true,
       "search_region": {
-        "x": 1524,
-        "y": 215,
-        "width": 147,
-        "height": 189
-      }
+        "x": 1418,
+        "y": 207,
+        "width": 150,
+        "height": 371
+      },
+      "blank_rune_image": "blank.png",
+      "vmware_mode": true,
+      "input_delay": 0.2,
+      "movement_duration": 1.0,
+      "click_delay": 0.1
     },
     "food_eating": {
       "enabled": false,
@@ -97,6 +106,7 @@
         "width": 124,
         "height": 43
       },
+      "health_bar_image": "health_reference.png",
       "low_health_threshold": 0.5,
       "emergency_hotkey": "f2",
       "max_health": 800,

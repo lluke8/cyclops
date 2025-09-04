@@ -7,6 +7,7 @@ import json
 import os
 import logging
 from typing import Dict, Any, Optional, List
+from .resource_loader import resource_path, get_config_path
 
 class ConfigManager:
     """Configuration management with validation and defaults"""
@@ -18,11 +19,12 @@ class ConfigManager:
         Args:
             config_path: Path to configuration file
         """
-        self.config_path = config_path
+        # Use resource path resolver for PyInstaller compatibility
+        self.config_path = get_config_path(config_path.split('/')[-1]) if '/' in config_path else get_config_path(config_path)
         self.logger = logging.getLogger(__name__)
         self.config = self._load_config()
         
-        self.logger.info(f"Configuration manager initialized with: {config_path}")
+        self.logger.info(f"Configuration manager initialized with: {self.config_path}")
     
     def _load_config(self) -> Dict[str, Any]:
         """Load configuration from file with fallback to defaults"""
@@ -49,7 +51,12 @@ class ConfigManager:
                 "log_level": "INFO"
             },
             "screen_capture": {
-                "default_region": [0, 0, 1920, 1080],
+                "default_region": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1920,
+                    "height": 1080
+                },
                 "capture_fps": 10,
                 "save_screenshots": False
             },
@@ -200,10 +207,21 @@ class ConfigManager:
                 sc_config = self.config['screen_capture']
                 if 'default_region' in sc_config:
                     region = sc_config['default_region']
-                    if not isinstance(region, list) or len(region) != 4:
-                        issues.append("screen_capture.default_region must be a list of 4 integers")
-                    elif any(not isinstance(x, int) or x < 0 for x in region):
-                        issues.append("screen_capture.default_region values must be non-negative integers")
+                    if isinstance(region, dict):
+                        # New format: {"x": 0, "y": 0, "width": 1920, "height": 1080}
+                        required_keys = ['x', 'y', 'width', 'height']
+                        if not all(key in region for key in required_keys):
+                            issues.append("screen_capture.default_region must contain x, y, width, height")
+                        elif any(not isinstance(region[key], int) or region[key] < 0 for key in required_keys):
+                            issues.append("screen_capture.default_region values must be non-negative integers")
+                    elif isinstance(region, list):
+                        # Legacy format: [0, 0, 1920, 1080]
+                        if len(region) != 4:
+                            issues.append("screen_capture.default_region must be a list of 4 integers")
+                        elif any(not isinstance(x, int) or x < 0 for x in region):
+                            issues.append("screen_capture.default_region values must be non-negative integers")
+                    else:
+                        issues.append("screen_capture.default_region must be a dict or list")
             
             # Validate OCR settings
             if 'ocr' in self.config:

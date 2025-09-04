@@ -10,12 +10,14 @@ import threading
 import time
 from typing import Dict, Any, Optional
 from utils.config_manager import ConfigManager
+from utils.resource_loader import find_resource, get_image_path
 from core.screen_capture import ScreenCapture
 from core.ocr_engine import OCREngine
 from core.computer_vision import ComputerVision
 from core.input_simulator import InputSimulator
 from core.state_monitor import StateMonitor
 from automation.workflow_manager import WorkflowManager
+from core.global_hotkeys import GlobalHotkeyManager
 
 class CyclopsMainWindow:
     """Main application window with tabbed interface"""
@@ -57,6 +59,10 @@ class CyclopsMainWindow:
         self.persistent_overlay = None
         self.rune_persistent_overlay = None
         
+        # Global hotkey manager
+        self.global_hotkeys = GlobalHotkeyManager()
+        self._setup_global_hotkeys()
+        
         # Setup window
         self._setup_window()
         self._create_widgets()
@@ -65,7 +71,7 @@ class CyclopsMainWindow:
         
         # Create persistent overlay if region is configured and overlay is enabled
         if self.show_overlay.get():
-            current_region = self.config_manager.get('automation.health_monitoring.health_bar_region', [50, 50, 200, 20])
+            current_region = self.config_manager.get('automation.health_monitoring.health_bar_region', {'x': 50, 'y': 50, 'width': 200, 'height': 20})
             self._create_persistent_overlay(
                 current_region['x'], current_region['y'],
                 current_region['width'], current_region['height']
@@ -445,6 +451,65 @@ class CyclopsMainWindow:
         ttk.Button(search_region_buttons, text="Test Detection (PageUp)", 
                   command=self._test_rune_detection).pack(side=tk.LEFT, padx=2)
         
+        # Blank Rune Image Selection
+        rune_image_frame = ttk.Frame(rune_config_frame)
+        rune_image_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        ttk.Label(rune_image_frame, text="Blank Rune Image:").pack(anchor=tk.W)
+        
+        # Current blank rune image display
+        self.rune_image_display = tk.StringVar()
+        rune_image_path = self.config_manager.get('automation.rune_creation.blank_rune_image', 'blank.png')
+        self.rune_image_display.set(rune_image_path)
+        ttk.Label(rune_image_frame, textvariable=self.rune_image_display, font=('Arial', 9), foreground='blue').pack(anchor=tk.W, pady=2)
+        
+        # Blank rune image selection button
+        ttk.Button(rune_image_frame, text="Select Blank Rune Image", 
+                  command=self._select_rune_image).pack(anchor=tk.W, padx=5, pady=2)
+        
+        # Window Focus Configuration
+        window_focus_frame = ttk.LabelFrame(rune_config_frame, text="Window Focus")
+        window_focus_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        # Window focus enabled checkbox
+        self.window_focus_enabled = tk.BooleanVar()
+        self.window_focus_enabled.set(self.config_manager.get('automation.rune_creation.window_focus_enabled', True))
+        ttk.Checkbutton(window_focus_frame, text="Enable Window Focus", 
+                       variable=self.window_focus_enabled,
+                       command=self._update_window_focus_config).pack(anchor=tk.W, padx=5, pady=2)
+        
+        # Target window name input
+        target_window_frame = ttk.Frame(window_focus_frame)
+        target_window_frame.pack(fill=tk.X, padx=5, pady=2)
+        
+        ttk.Label(target_window_frame, text="Target Window Name:").pack(side=tk.LEFT, padx=5)
+        self.target_window_name = tk.StringVar()
+        self.target_window_name.set(self.config_manager.get('automation.rune_creation.target_window_name', ''))
+        self.target_window_entry = ttk.Entry(target_window_frame, textvariable=self.target_window_name, width=30)
+        self.target_window_entry.pack(side=tk.LEFT, padx=5, fill=tk.X, expand=True)
+        
+        # Window selection buttons
+        window_buttons_frame = ttk.Frame(window_focus_frame)
+        window_buttons_frame.pack(fill=tk.X, padx=5, pady=2)
+        
+        ttk.Button(window_buttons_frame, text="Refresh Window List", 
+                  command=self._refresh_window_list).pack(side=tk.LEFT, padx=2)
+        ttk.Button(window_buttons_frame, text="Test Window Focus", 
+                  command=self._test_window_focus).pack(side=tk.LEFT, padx=2)
+        
+        # Available windows list
+        ttk.Label(window_focus_frame, text="Available Windows:").pack(anchor=tk.W, padx=5, pady=(5,0))
+        self.window_listbox = tk.Listbox(window_focus_frame, height=4, font=('Arial', 8))
+        self.window_listbox.pack(fill=tk.X, padx=5, pady=2)
+        self.window_listbox.bind('<Double-Button-1>', self._on_window_selected)
+        
+        # Scrollbar for window list
+        window_scrollbar = ttk.Scrollbar(window_focus_frame, orient=tk.VERTICAL, command=self.window_listbox.yview)
+        self.window_listbox.configure(yscrollcommand=window_scrollbar.set)
+        
+        # Load initial window list
+        self._refresh_window_list()
+        
         # Food Eating Configuration
         food_config_frame = ttk.LabelFrame(scrollable_frame, text="Food Eating")
         food_config_frame.pack(fill=tk.X, padx=10, pady=5)
@@ -524,7 +589,7 @@ class CyclopsMainWindow:
         
         # Current region display
         self.health_region_display = tk.StringVar()
-        current_region = self.config_manager.get('automation.health_monitoring.health_bar_region', [50, 50, 200, 20])
+        current_region = self.config_manager.get('automation.health_monitoring.health_bar_region', {'x': 50, 'y': 50, 'width': 200, 'height': 20})
         self.health_region_display.set(f"X:{current_region['x']}, Y:{current_region['y']}, W:{current_region['width']}, H:{current_region['height']}")
         ttk.Label(region_frame, textvariable=self.health_region_display, font=('Arial', 9)).pack(anchor=tk.W, pady=2)
         
@@ -544,6 +609,24 @@ class CyclopsMainWindow:
         ttk.Checkbutton(region_frame, text="Show Region Overlay", 
                        variable=self.show_overlay,
                        command=self._toggle_overlay).pack(anchor=tk.W, pady=2)
+        
+        # Health Bar Image Selection
+        health_image_frame = ttk.Frame(health_config_frame)
+        health_image_frame.pack(fill=tk.X, padx=5, pady=5)
+        
+        ttk.Label(health_image_frame, text="Health Bar Image:").pack(anchor=tk.W)
+        
+        # Current health image display
+        self.health_image_display = tk.StringVar()
+        health_image_path = self.config_manager.get('automation.health_monitoring.health_bar_image', 'health_reference.png')
+        # Use resource path resolver for PyInstaller compatibility
+        resolved_health_path = find_resource(health_image_path) or get_image_path(health_image_path)
+        self.health_image_display.set(resolved_health_path)
+        ttk.Label(health_image_frame, textvariable=self.health_image_display, font=('Arial', 9), foreground='blue').pack(anchor=tk.W, pady=2)
+        
+        # Health image selection button
+        ttk.Button(health_image_frame, text="Select Health Bar Image", 
+                  command=self._select_health_image).pack(anchor=tk.W, padx=5, pady=2)
         
         # Save button
         save_button = ttk.Button(scrollable_frame, text="Save Configuration", 
@@ -592,9 +675,50 @@ class CyclopsMainWindow:
         self.connection_label = ttk.Label(status_frame, text="Connected", style='Success.TLabel')
         self.connection_label.pack(side=tk.RIGHT)
     
+    def _setup_global_hotkeys(self):
+        """Setup global hotkeys that work system-wide"""
+        try:
+            # Register global F2 for rune creation test
+            self.global_hotkeys.register_hotkey(
+                'f2', 
+                self._test_rune_creation, 
+                "Test Rune Creation"
+            )
+            
+            # Register global F3 for food eating test
+            self.global_hotkeys.register_hotkey(
+                'f3', 
+                self._test_food_eating, 
+                "Test Food Eating"
+            )
+            
+            # Register global PageDown for image search test
+            self.global_hotkeys.register_hotkey(
+                'page down', 
+                self._test_image_search, 
+                "Test Image Search"
+            )
+            
+            # Register global PageUp for rune detection test
+            self.global_hotkeys.register_hotkey(
+                'page up', 
+                self._test_rune_detection, 
+                "Test Rune Detection"
+            )
+            
+            # Start the global hotkey manager
+            self.global_hotkeys.start()
+            
+            self.logger.info("Global hotkeys registered and started")
+            
+        except Exception as e:
+            self.logger.error(f"Failed to setup global hotkeys: {e}")
+    
     def _setup_bindings(self):
         """Setup event bindings"""
         self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
+        # Note: Global hotkeys are now handled by GlobalHotkeyManager
+        # Local bindings are kept as backup
         self.root.bind('<Next>', lambda e: self._test_image_search())  # PageDown key
         self.root.bind('<Prior>', lambda e: self._test_rune_detection())  # PageUp key
         self.root.bind('<F2>', lambda e: self._test_rune_creation())  # F2 key
@@ -608,9 +732,11 @@ class CyclopsMainWindow:
             health_region = (health_region_dict['x'], health_region_dict['y'], 
                            health_region_dict['width'], health_region_dict['height'])
             
-            # Test image search
+            # Test image search using resource path resolver
+            health_image_path = self.config_manager.get('automation.health_monitoring.health_bar_image', 'health_reference.png')
+            resolved_health_path = find_resource(health_image_path) or get_image_path(health_image_path)
             result = self.workflow_manager.state_monitor.test_image_search(
-                health_region, 'health_reference.png', 0.8
+                health_region, resolved_health_path, 0.8
             )
             
             if result['success']:
@@ -777,6 +903,8 @@ class CyclopsMainWindow:
             self.config_manager.set('automation.rune_creation.hotkey', self.rune_hotkey.get())
             self.config_manager.set('automation.rune_creation.min_delay_minutes', float(self.rune_min_delay.get()))
             self.config_manager.set('automation.rune_creation.max_delay_minutes', float(self.rune_max_delay.get()))
+            self.config_manager.set('automation.rune_creation.window_focus_enabled', self.window_focus_enabled.get())
+            self.config_manager.set('automation.rune_creation.target_window_name', self.target_window_name.get())
             self.config_manager.set('automation.food_eating.cooldown_seconds', int(self.food_cooldown.get()))
             self.config_manager.set('automation.food_eating.min_clicks', int(self.food_min_clicks.get()))
             self.config_manager.set('automation.food_eating.max_clicks', int(self.food_max_clicks.get()))
@@ -916,7 +1044,7 @@ class CyclopsMainWindow:
                 # Show overlay - create it if it doesn't exist
                 if not self.persistent_overlay:
                     # Get current region from config
-                    current_region = self.config_manager.get('automation.health_monitoring.health_bar_region', [50, 50, 200, 20])
+                    current_region = self.config_manager.get('automation.health_monitoring.health_bar_region', {'x': 50, 'y': 50, 'width': 200, 'height': 20})
                     self._create_persistent_overlay(
                         current_region['x'], current_region['y'],
                         current_region['width'], current_region['height']
@@ -1028,6 +1156,9 @@ class CyclopsMainWindow:
                 # Stop all workflows
                 self.workflow_manager.stop_all_workflows()
                 
+                # Stop global hotkeys
+                self.global_hotkeys.stop()
+                
                 # Destroy persistent overlays
                 if self.persistent_overlay:
                     self.persistent_overlay.destroy()
@@ -1043,6 +1174,75 @@ class CyclopsMainWindow:
             except Exception as e:
                 self.logger.error(f"Error during shutdown: {e}")
                 self.root.destroy()
+    
+    def _update_window_focus_config(self):
+        """Update window focus configuration"""
+        try:
+            self.config_manager.set('automation.rune_creation.window_focus_enabled', self.window_focus_enabled.get())
+            self.config_manager.set('automation.rune_creation.target_window_name', self.target_window_name.get())
+            self.logger.info(f"Updated window focus config: enabled={self.window_focus_enabled.get()}, window='{self.target_window_name.get()}'")
+        except Exception as e:
+            self.logger.error(f"Failed to update window focus config: {e}")
+    
+    def _refresh_window_list(self):
+        """Refresh the list of available windows"""
+        try:
+            self.logger.info("Refreshing window list...")
+            windows = self.input_simulator.get_available_windows()
+            
+            # Clear current list
+            self.window_listbox.delete(0, tk.END)
+            
+            # Add windows to list
+            for window in windows:
+                self.window_listbox.insert(tk.END, window)
+            
+            self.logger.info(f"Loaded {len(windows)} windows")
+            
+        except Exception as e:
+            self.logger.error(f"Failed to refresh window list: {e}")
+            messagebox.showerror("Error", f"Failed to refresh window list: {e}")
+    
+    def _on_window_selected(self, event):
+        """Handle window selection from listbox"""
+        try:
+            selection = self.window_listbox.curselection()
+            if selection:
+                window_text = self.window_listbox.get(selection[0])
+                # Extract just the window title (before the process name in parentheses)
+                window_title = window_text.split(' (')[0]
+                self.target_window_name.set(window_title)
+                self.logger.info(f"Selected window: {window_title}")
+        except Exception as e:
+            self.logger.error(f"Failed to select window: {e}")
+    
+    def _test_window_focus(self):
+        """Test window focus functionality"""
+        try:
+            window_name = self.target_window_name.get().strip()
+            if not window_name:
+                messagebox.showwarning("No Window Selected", "Please enter a target window name.")
+                return
+            
+            self.logger.info(f"Testing window focus for: '{window_name}'")
+            
+            # Test window focus
+            result = self.input_simulator.test_window_focus(window_name)
+            
+            if result['success']:
+                messagebox.showinfo("Window Focus Test", 
+                                  f"✅ SUCCESS!\n\n"
+                                  f"Window: {result['window_info']['title']}\n"
+                                  f"Process: {result['window_info']['process']}\n"
+                                  f"Size: {result['window_info']['size']}\n\n"
+                                  f"Window was successfully focused!")
+            else:
+                messagebox.showerror("Window Focus Test Failed", 
+                                   f"❌ FAILED!\n\n{result['message']}")
+                
+        except Exception as e:
+            self.logger.error(f"Window focus test failed: {e}")
+            messagebox.showerror("Error", f"Window focus test failed: {e}")
     
     def _update_food_positions_display(self):
         """Update the food positions display"""
@@ -1377,3 +1577,67 @@ class CyclopsMainWindow:
         except Exception as e:
             self.logger.error(f"Rune detection test failed: {e}")
             messagebox.showerror("Test Failed", f"Detection test failed: {e}")
+    
+    def _select_health_image(self):
+        """Open file dialog to select health bar image"""
+        try:
+            from tkinter import filedialog
+            
+            # Get current directory or use default
+            initial_dir = "."
+            initial_file = self.health_image_display.get()
+            
+            # Open file dialog
+            file_path = filedialog.askopenfilename(
+                title="Select Health Bar Image",
+                initialdir=initial_dir,
+                initialfile=initial_file,
+                filetypes=[
+                    ("Image files", "*.png *.jpg *.jpeg *.bmp *.gif"),
+                    ("PNG files", "*.png"),
+                    ("All files", "*.*")
+                ]
+            )
+            
+            if file_path:
+                # Update display and configuration
+                self.health_image_display.set(file_path)
+                self.config_manager.set('automation.health_monitoring.health_bar_image', file_path)
+                self.logger.info(f"Health bar image selected: {file_path}")
+                messagebox.showinfo("Image Selected", f"Health bar image set to:\n{file_path}")
+                
+        except Exception as e:
+            self.logger.error(f"Failed to select health image: {e}")
+            messagebox.showerror("Error", f"Failed to select image: {e}")
+    
+    def _select_rune_image(self):
+        """Open file dialog to select blank rune image"""
+        try:
+            from tkinter import filedialog
+            
+            # Get current directory or use default
+            initial_dir = "."
+            initial_file = self.rune_image_display.get()
+            
+            # Open file dialog
+            file_path = filedialog.askopenfilename(
+                title="Select Blank Rune Image",
+                initialdir=initial_dir,
+                initialfile=initial_file,
+                filetypes=[
+                    ("Image files", "*.png *.jpg *.jpeg *.bmp *.gif"),
+                    ("PNG files", "*.png"),
+                    ("All files", "*.*")
+                ]
+            )
+            
+            if file_path:
+                # Update display and configuration
+                self.rune_image_display.set(file_path)
+                self.config_manager.set('automation.rune_creation.blank_rune_image', file_path)
+                self.logger.info(f"Blank rune image selected: {file_path}")
+                messagebox.showinfo("Image Selected", f"Blank rune image set to:\n{file_path}")
+                
+        except Exception as e:
+            self.logger.error(f"Failed to select rune image: {e}")
+            messagebox.showerror("Error", f"Failed to select image: {e}")

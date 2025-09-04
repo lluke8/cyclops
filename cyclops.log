@@ -5068,3 +5068,1722 @@
 2025-09-04 01:48:37,214 - automation.food_eating - INFO - Food eating sequence completed: 4 clicks at position (1693, 743)
 2025-09-04 01:48:37,214 - automation.food_eating - INFO - Food eating sequence completed (total: 1)
 2025-09-04 01:48:37,214 - automation.food_eating - INFO - Next food eating scheduled in 5.8 minutes at 01:54:27
+2025-09-04 01:49:13,601 - gui.main_window - INFO - Stopping all automations
+2025-09-04 01:49:13,601 - automation.workflow_manager - INFO - Stopping workflow: custom_automation
+2025-09-04 01:49:13,602 - automation.rune_creation - INFO - Stopping rune creation automation
+2025-09-04 01:49:14,202 - automation.rune_creation - INFO - Rune creation automation stopped. Created: 1, Failed: 0
+2025-09-04 01:49:14,202 - automation.workflow_manager - INFO - Stopped automation: rune_creation
+2025-09-04 01:49:14,202 - automation.food_eating - INFO - Stopping food eating automation
+2025-09-04 01:49:15,099 - automation.food_eating - INFO - Food eating automation stopped. Total eaten: 1
+2025-09-04 01:49:15,099 - automation.workflow_manager - INFO - Stopped automation: food_eating
+2025-09-04 01:49:15,099 - automation.health_monitor - INFO - Stopping health monitoring automation
+2025-09-04 01:49:15,102 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 01:49:17,113 - automation.workflow_manager - INFO - Stopped automation: health_monitor
+2025-09-04 01:49:17,113 - automation.workflow_manager - INFO - Workflow 'custom_automation' stopped successfully
+2025-09-04 01:49:17,114 - automation.health_monitor - ERROR - Health status check failed: invalid command name ".!toplevel26"
+2025-09-04 01:49:17,114 - automation.health_monitor - INFO - Health monitoring stopped due to emergency response
+2025-09-04 01:49:17,567 - core.state_monitor - INFO - State monitoring stopped
+2025-09-04 01:49:17,567 - automation.health_monitor - INFO - Health monitoring automation stopped. Emergency responses: 0
+2025-09-04 01:49:17,568 - gui.main_window - INFO - Health monitoring stopped - updating overlay to yellow
+2025-09-04 01:53:22,856 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 01:53:23,035 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 01:53:23,035 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 01:53:23,035 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 01:53:23,035 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 01:53:23,035 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 01:53:23,035 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 01:53:23,035 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 01:53:23,036 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 01:53:23,036 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 01:53:23,036 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 01:53:23,036 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 01:53:23,036 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 01:53:23,036 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\src\automation\..\..\blank.png
+2025-09-04 01:53:23,036 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 01:53:23,036 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 01:53:23,036 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 01:53:23,036 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 01:53:23,037 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 01:53:23,037 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 01:53:23,037 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 01:53:23,047 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 01:53:23,047 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 01:53:23,051 - gui.main_window - INFO - Updated rune search region display: Region: (1524, 215) - 147x189
+2025-09-04 01:53:23,053 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 01:53:23,054 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 01:53:23,068 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 01:53:23,068 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 01:53:23,068 - gui.region_selector - INFO - Region overlay created at (1524, 215) - Border only
+2025-09-04 01:53:23,068 - gui.main_window - INFO - Rune persistent overlay created at (1524, 215) - 147x189
+2025-09-04 01:53:23,068 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 01:53:23,068 - gui.main_window - INFO - Main window initialized
+2025-09-04 01:53:23,069 - cyclops - INFO - Application started successfully
+2025-09-04 01:53:29,857 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 01:53:30,023 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 01:53:30,024 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 01:53:30,024 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 01:53:30,024 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 01:53:30,024 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 01:53:30,024 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 01:53:30,024 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 01:53:30,024 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 01:53:30,024 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 01:53:30,024 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 01:53:30,024 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 01:53:30,024 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 01:53:30,024 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\src\automation\..\..\blank.png
+2025-09-04 01:53:30,025 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 01:53:30,025 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 01:53:30,025 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 01:53:30,025 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 01:53:30,025 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 01:53:30,025 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 01:53:30,025 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 01:53:30,035 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 01:53:30,035 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 01:53:30,040 - gui.main_window - INFO - Updated rune search region display: Region: (1524, 215) - 147x189
+2025-09-04 01:53:30,043 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 01:53:30,043 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 01:53:30,057 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 01:53:30,057 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 01:53:30,058 - gui.region_selector - INFO - Region overlay created at (1524, 215) - Border only
+2025-09-04 01:53:30,058 - gui.main_window - INFO - Rune persistent overlay created at (1524, 215) - 147x189
+2025-09-04 01:53:30,058 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 01:53:30,059 - gui.main_window - INFO - Main window initialized
+2025-09-04 01:53:30,059 - cyclops - INFO - Application started successfully
+2025-09-04 01:54:17,891 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 01:54:18,057 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 01:54:18,057 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 01:54:18,058 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 01:54:18,058 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 01:54:18,058 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 01:54:18,058 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 01:54:18,058 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 01:54:18,058 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 01:54:18,058 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 01:54:18,058 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 01:54:18,058 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 01:54:18,058 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 01:54:18,058 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\src\automation\..\..\blank.png
+2025-09-04 01:54:18,058 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 01:54:18,059 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 01:54:18,059 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 01:54:18,059 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 01:54:18,059 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 01:54:18,059 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 01:54:18,059 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 01:54:18,068 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 01:54:18,068 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 01:54:18,074 - gui.main_window - INFO - Updated rune search region display: Region: (1524, 215) - 147x189
+2025-09-04 01:54:18,078 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 01:54:18,078 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 01:54:18,098 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 01:54:18,098 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 01:54:18,099 - gui.region_selector - INFO - Region overlay created at (1524, 215) - Border only
+2025-09-04 01:54:18,099 - gui.main_window - INFO - Rune persistent overlay created at (1524, 215) - 147x189
+2025-09-04 01:54:18,100 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 01:54:18,100 - gui.main_window - INFO - Main window initialized
+2025-09-04 01:54:18,100 - cyclops - INFO - Application started successfully
+2025-09-04 01:58:15,055 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 01:58:27,479 - cyclops - ERROR - Missing dependencies. Exiting.
+2025-09-04 02:03:55,358 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 02:03:55,539 - cyclops - ERROR - Failed to start application: cannot import name 'scrolledtext' from 'tkinter' (C:\Users\Lucas\AppData\Local\Temp\_MEI536722\tkinter\__init__.py)
+2025-09-04 02:06:09,643 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 02:06:09,869 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 02:06:09,869 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 02:06:09,869 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 02:06:09,869 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 02:06:09,869 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 02:06:09,869 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 02:06:09,869 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 02:06:09,869 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 02:06:09,869 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 02:06:09,869 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 02:06:09,869 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 02:06:09,869 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 02:06:09,869 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\AppData\Local\Temp\_MEI538602\src\automation\..\..\blank.png
+2025-09-04 02:06:09,869 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 02:06:09,869 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 02:06:09,870 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 02:06:09,870 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 02:06:09,870 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 02:06:09,870 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 02:06:09,870 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 02:06:09,879 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 02:06:09,879 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 02:06:09,884 - gui.main_window - INFO - Updated rune search region display: Region: (1524, 215) - 147x189
+2025-09-04 02:06:09,888 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 02:06:09,888 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 02:06:09,904 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 02:06:09,904 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 02:06:09,904 - gui.region_selector - INFO - Region overlay created at (1524, 215) - Border only
+2025-09-04 02:06:09,904 - gui.main_window - INFO - Rune persistent overlay created at (1524, 215) - 147x189
+2025-09-04 02:06:09,904 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 02:06:09,904 - gui.main_window - INFO - Main window initialized
+2025-09-04 02:06:09,904 - cyclops - INFO - Application started successfully
+2025-09-04 02:06:53,556 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 02:06:53,558 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 02:06:55,287 - gui.region_selector - INFO - Recorded rune target position 1 at (1686, 417)
+2025-09-04 02:06:55,799 - gui.region_selector - INFO - Recorded rune target position 2 at (1692, 421)
+2025-09-04 02:06:56,238 - gui.region_selector - INFO - Recorded final rune target position 3 at (1697, 426)
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Rune position recording callback received: [(1686, 417), (1692, 421), (1697, 426)]
+2025-09-04 02:06:57,761 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Adding rune position 1: (1686, 417)
+2025-09-04 02:06:57,761 - automation.rune_creation - INFO - Added rune position: (1686, 417)
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Successfully added rune position 1: (1686, 417)
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Adding rune position 2: (1692, 421)
+2025-09-04 02:06:57,761 - automation.rune_creation - INFO - Added rune position: (1692, 421)
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Successfully added rune position 2: (1692, 421)
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Adding rune position 3: (1697, 426)
+2025-09-04 02:06:57,761 - automation.rune_creation - INFO - Added rune position: (1697, 426)
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Successfully added rune position 3: (1697, 426)
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1686, 417), (1692, 421), (1697, 426)]
+2025-09-04 02:06:57,761 - gui.main_window - INFO - Updated display to: Positions: (1686, 417), (1692, 421), (1697, 426) (3/3)
+2025-09-04 02:07:00,683 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 02:07:04,956 - gui.region_selector - INFO - Region selected: X:1535, Y:227, W:128, H:169
+2025-09-04 02:07:05,695 - gui.main_window - INFO - Rune search region selected: (1535, 227) - 128x169
+2025-09-04 02:07:05,695 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 02:07:05,706 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 02:07:05,708 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 02:07:05,708 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 02:07:12,873 - automation.workflow_manager - INFO - Stopping all workflows...
+2025-09-04 02:07:12,873 - automation.workflow_manager - INFO - All workflows stopped
+2025-09-04 02:07:12,879 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 02:07:12,884 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 02:07:12,884 - utils.config_manager - INFO - Configuration saved to config/default_config.json
+2025-09-04 02:07:14,916 - gui.main_window - INFO - Configuration saved
+2025-09-04 02:07:14,917 - gui.main_window - INFO - Application closing
+2025-09-04 02:07:14,983 - cyclops - INFO - Application closed
+2025-09-04 14:30:18,821 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 14:30:19,970 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 14:30:19,970 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 14:30:19,970 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 14:30:19,970 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 14:30:19,970 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 14:30:19,970 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:30:19,970 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 14:30:19,971 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 14:30:19,971 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:30:19,971 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 14:30:19,971 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 14:30:19,971 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 14:30:19,971 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\src\automation\..\..\blank.png
+2025-09-04 14:30:19,971 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 14:30:19,971 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 14:30:19,971 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 14:30:19,971 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 14:30:19,972 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 14:30:19,972 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 14:30:19,972 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 14:30:19,982 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 14:30:19,982 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 14:30:19,987 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 14:30:19,991 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 14:30:19,991 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 14:30:20,007 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 14:30:20,007 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 14:30:20,009 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 14:30:20,009 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 14:30:20,010 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 14:30:20,010 - gui.main_window - INFO - Main window initialized
+2025-09-04 14:30:20,010 - cyclops - INFO - Application started successfully
+2025-09-04 14:30:40,229 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 14:30:42,221 - gui.region_selector - INFO - Region selected: X:1494, Y:518, W:71, H:138
+2025-09-04 14:30:43,620 - gui.main_window - INFO - Rune search region selected: (1494, 518) - 71x138
+2025-09-04 14:30:43,620 - gui.main_window - INFO - Updated rune search region display: Region: (1494, 518) - 71x138
+2025-09-04 14:30:43,632 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 14:30:43,635 - gui.region_selector - INFO - Region overlay created at (1494, 518) - Border only
+2025-09-04 14:30:43,636 - gui.main_window - INFO - Rune persistent overlay created at (1494, 518) - 71x138
+2025-09-04 14:30:46,547 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 14:30:46,644 - gui.main_window - WARNING - ERROR: BLANK IMAGE NOT FOUND
+2025-09-04 14:35:31,244 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 14:35:31,436 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 14:35:31,436 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 14:35:31,436 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 14:35:31,436 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 14:35:31,437 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 14:35:31,437 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:35:31,437 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 14:35:31,438 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 14:35:31,438 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:35:31,438 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 14:35:31,438 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 14:35:31,438 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 14:35:31,438 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\AppData\Local\Temp\_MEI172962\src\automation\..\..\blank.png
+2025-09-04 14:35:31,438 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 14:35:31,438 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 14:35:31,438 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 14:35:31,438 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 14:35:31,438 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 14:35:31,439 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 14:35:31,439 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 14:35:31,449 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 14:35:31,449 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 14:35:31,456 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 14:35:31,459 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 14:35:31,460 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 14:35:31,478 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 14:35:31,479 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 14:35:31,479 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 14:35:31,479 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 14:35:31,479 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 14:35:31,479 - gui.main_window - INFO - Main window initialized
+2025-09-04 14:35:31,480 - cyclops - INFO - Application started successfully
+2025-09-04 14:37:44,620 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 14:37:44,835 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 14:37:44,835 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 14:37:44,835 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 14:37:44,836 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 14:37:44,836 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 14:37:44,836 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:37:44,836 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 14:37:44,836 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 14:37:44,836 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:37:44,836 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 14:37:44,836 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 14:37:44,836 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 14:37:44,836 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\AppData\Local\Temp\_MEI266402\src\automation\..\..\blank.png
+2025-09-04 14:37:44,836 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 14:37:44,836 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 14:37:44,836 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 14:37:44,836 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 14:37:44,836 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 14:37:44,836 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 14:37:44,836 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 14:37:44,846 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 14:37:44,846 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 14:37:44,851 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 14:37:44,854 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 14:37:44,854 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 14:37:44,872 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 14:37:44,872 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 14:37:44,872 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 14:37:44,873 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 14:37:44,873 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 14:37:44,873 - gui.main_window - INFO - Main window initialized
+2025-09-04 14:37:44,873 - cyclops - INFO - Application started successfully
+2025-09-04 14:39:08,887 - automation.workflow_manager - INFO - Stopping all workflows...
+2025-09-04 14:39:08,888 - automation.workflow_manager - INFO - All workflows stopped
+2025-09-04 14:39:08,891 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 14:39:08,895 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 14:39:08,895 - utils.config_manager - INFO - Configuration saved to config/default_config.json
+2025-09-04 14:39:09,823 - gui.main_window - INFO - Configuration saved
+2025-09-04 14:39:09,823 - gui.main_window - INFO - Application closing
+2025-09-04 14:39:09,853 - cyclops - INFO - Application closed
+2025-09-04 14:58:34,739 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 14:58:34,913 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 14:58:34,913 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 14:58:34,914 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 14:58:34,914 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 14:58:34,914 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 14:58:34,914 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:58:34,914 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 14:58:34,914 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 14:58:34,914 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 14:58:34,914 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 14:58:34,914 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 14:58:34,914 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 14:58:34,914 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\src\automation\..\..\blank.png
+2025-09-04 14:58:34,915 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 14:58:34,915 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 14:58:34,915 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 14:58:34,915 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 14:58:34,915 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 14:58:34,915 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 14:58:34,915 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 14:58:34,926 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 14:58:34,926 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 14:58:34,933 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 14:58:34,936 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 14:58:34,937 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 14:58:34,954 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 14:58:34,954 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 14:58:34,954 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 14:58:34,954 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 14:58:34,955 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 14:58:34,955 - gui.main_window - INFO - Main window initialized
+2025-09-04 14:58:34,955 - cyclops - INFO - Application started successfully
+2025-09-04 15:00:06,198 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 15:00:06,414 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 15:00:06,414 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 15:00:06,414 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 15:00:06,414 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 15:00:06,414 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 15:00:06,414 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 15:00:06,415 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 15:00:06,415 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 15:00:06,415 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 15:00:06,415 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 15:00:06,415 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 15:00:06,415 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 15:00:06,415 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\AppData\Local\Temp\_MEI552682\src\automation\..\..\blank.png
+2025-09-04 15:00:06,415 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 15:00:06,415 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 15:00:06,415 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 15:00:06,415 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 15:00:06,415 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 15:00:06,415 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 15:00:06,415 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 15:00:06,424 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 15:00:06,425 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 15:00:06,429 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 15:00:06,433 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 15:00:06,433 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 15:00:06,450 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 15:00:06,450 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 15:00:06,451 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 15:00:06,451 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 15:00:06,451 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 15:00:06,451 - gui.main_window - INFO - Main window initialized
+2025-09-04 15:00:06,451 - cyclops - INFO - Application started successfully
+2025-09-04 15:00:50,528 - automation.workflow_manager - INFO - Stopping all workflows...
+2025-09-04 15:00:50,528 - automation.workflow_manager - INFO - All workflows stopped
+2025-09-04 15:00:50,534 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 15:00:50,538 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 15:00:50,538 - utils.config_manager - INFO - Configuration saved to config/default_config.json
+2025-09-04 15:00:52,502 - gui.main_window - INFO - Configuration saved
+2025-09-04 15:00:52,502 - gui.main_window - INFO - Application closing
+2025-09-04 15:00:52,535 - cyclops - INFO - Application closed
+2025-09-04 15:08:37,388 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 15:08:37,602 - utils.config_manager - INFO - Configuration loaded from config/default_config.json
+2025-09-04 15:08:37,602 - utils.config_manager - INFO - Configuration manager initialized with: config/default_config.json
+2025-09-04 15:08:37,602 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 15:08:37,602 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 15:08:37,602 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 15:08:37,602 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 15:08:37,602 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 15:08:37,602 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 15:08:37,602 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 15:08:37,602 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 15:08:37,602 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 15:08:37,602 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 15:08:37,602 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\AppData\Local\Temp\_MEI409042\src\automation\..\..\blank.png
+2025-09-04 15:08:37,602 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 15:08:37,602 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 15:08:37,602 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 15:08:37,602 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 15:08:37,602 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 15:08:37,603 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 15:08:37,603 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 15:08:37,612 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 15:08:37,612 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 15:08:37,617 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 15:08:37,620 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 15:08:37,620 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 15:08:37,639 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 15:08:37,640 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 15:08:37,640 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 15:08:37,640 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 15:08:37,640 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 15:08:37,640 - gui.main_window - INFO - Main window initialized
+2025-09-04 15:08:37,640 - cyclops - INFO - Application started successfully
+2025-09-04 15:14:03,849 - automation.workflow_manager - INFO - Stopping all workflows...
+2025-09-04 15:14:03,849 - automation.workflow_manager - INFO - All workflows stopped
+2025-09-04 15:14:03,854 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 15:14:03,858 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 15:14:03,859 - utils.config_manager - INFO - Configuration saved to config/default_config.json
+2025-09-04 15:14:04,794 - gui.main_window - INFO - Configuration saved
+2025-09-04 15:14:04,794 - gui.main_window - INFO - Application closing
+2025-09-04 15:14:04,829 - cyclops - INFO - Application closed
+2025-09-04 15:35:52,807 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 15:35:52,991 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 15:35:52,991 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 15:35:52,991 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 15:35:52,991 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 15:35:52,992 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 15:35:52,992 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 15:35:52,992 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 15:35:52,992 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 15:35:52,992 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 15:35:52,992 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 15:35:52,992 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 15:35:52,992 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 15:35:52,993 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 15:35:52,993 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 15:35:52,993 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 15:35:52,993 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 15:35:52,993 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 15:35:52,993 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 15:35:52,993 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 15:35:52,994 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 15:35:53,003 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 15:35:53,004 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 15:35:53,009 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 15:35:53,013 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 15:35:53,013 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 15:35:53,030 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 15:35:53,030 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 15:35:53,030 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 15:35:53,030 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 15:35:53,031 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 15:35:53,031 - gui.main_window - INFO - Main window initialized
+2025-09-04 15:35:53,031 - cyclops - INFO - Application started successfully
+2025-09-04 16:04:13,139 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 16:04:13,320 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 16:04:13,320 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 16:04:13,321 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 16:04:13,321 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 16:04:13,321 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 16:04:13,321 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 16:04:13,321 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 16:04:13,321 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 16:04:13,321 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 16:04:13,321 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 16:04:13,321 - automation.rune_creation - INFO - Rune positions: 0 configured
+2025-09-04 16:04:13,321 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 16:04:13,321 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 16:04:13,321 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 16:04:13,322 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 16:04:13,322 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 16:04:13,322 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 16:04:13,322 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 16:04:13,322 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 16:04:13,322 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 16:04:13,331 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 16:04:13,331 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 16:04:13,337 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 16:04:13,340 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 16:04:13,341 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 16:04:13,357 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 16:04:13,358 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 16:04:13,358 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 16:04:13,358 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 16:04:13,359 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 16:04:13,359 - gui.main_window - INFO - Main window initialized
+2025-09-04 16:04:13,359 - cyclops - INFO - Application started successfully
+2025-09-04 16:04:22,304 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 16:04:22,307 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 16:04:23,319 - gui.region_selector - INFO - Recorded rune target position 1 at (1589, 447)
+2025-09-04 16:04:23,695 - gui.region_selector - INFO - Recorded rune target position 2 at (1587, 440)
+2025-09-04 16:04:24,187 - gui.region_selector - INFO - Recorded final rune target position 3 at (1593, 433)
+2025-09-04 16:04:25,715 - gui.main_window - INFO - Rune position recording callback received: [(1589, 447), (1587, 440), (1593, 433)]
+2025-09-04 16:04:25,715 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 16:04:25,718 - gui.main_window - INFO - Adding rune position 1: (1589, 447)
+2025-09-04 16:04:25,720 - automation.rune_creation - INFO - Added rune position: (1589, 447)
+2025-09-04 16:04:25,722 - gui.main_window - INFO - Successfully added rune position 1: (1589, 447)
+2025-09-04 16:04:25,723 - gui.main_window - INFO - Adding rune position 2: (1587, 440)
+2025-09-04 16:04:25,725 - automation.rune_creation - INFO - Added rune position: (1587, 440)
+2025-09-04 16:04:25,728 - gui.main_window - INFO - Successfully added rune position 2: (1587, 440)
+2025-09-04 16:04:25,732 - gui.main_window - INFO - Adding rune position 3: (1593, 433)
+2025-09-04 16:04:25,733 - automation.rune_creation - INFO - Added rune position: (1593, 433)
+2025-09-04 16:04:25,735 - gui.main_window - INFO - Successfully added rune position 3: (1593, 433)
+2025-09-04 16:04:25,736 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1589, 447), (1587, 440), (1593, 433)]
+2025-09-04 16:04:25,737 - gui.main_window - INFO - Updated display to: Positions: (1589, 447), (1587, 440), (1593, 433) (3/3)
+2025-09-04 16:04:28,182 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 16:04:31,109 - gui.region_selector - INFO - Region selected: X:1421, Y:219, W:147, H:346
+2025-09-04 16:04:31,796 - gui.main_window - INFO - Rune search region selected: (1421, 219) - 147x346
+2025-09-04 16:04:31,797 - gui.main_window - INFO - Updated rune search region display: Region: (1421, 219) - 147x346
+2025-09-04 16:04:31,808 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 16:04:31,811 - gui.region_selector - INFO - Region overlay created at (1421, 219) - Border only
+2025-09-04 16:04:31,812 - gui.main_window - INFO - Rune persistent overlay created at (1421, 219) - 147x346
+2025-09-04 16:04:34,159 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 16:04:34,197 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(29), y=np.int64(29)), absolute: (1450, 248)
+2025-09-04 16:04:34,197 - automation.rune_creation - INFO - Search region: (1421, 219) - 147x346
+2025-09-04 16:04:34,197 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1450, 248)
+2025-09-04 16:04:37,348 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 16:04:37,349 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 16:04:37,376 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(29), y=np.int64(29)), absolute: (1450, 248)
+2025-09-04 16:04:37,376 - automation.rune_creation - INFO - Search region: (1421, 219) - 147x346
+2025-09-04 16:04:37,376 - automation.rune_creation - INFO - Found blank rune at (1450, 248)
+2025-09-04 16:04:37,377 - automation.rune_creation - INFO - Selected target position: (1589, 447)
+2025-09-04 16:04:37,378 - automation.rune_creation - INFO - Performing drag and drop from (1450, 248) to (1589, 447)...
+2025-09-04 16:04:39,702 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 16:04:40,903 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 16:04:40,903 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 16:06:12,550 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 16:06:12,713 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 16:06:12,714 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 16:06:12,714 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 16:06:12,714 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 16:06:12,714 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 16:06:12,714 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 16:06:12,714 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 16:06:12,714 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 16:06:12,714 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 16:06:12,715 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 16:06:12,715 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 16:06:12,715 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 16:06:12,715 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 16:06:12,715 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 16:06:12,715 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 16:06:12,715 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 16:06:12,715 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 16:06:12,716 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 16:06:12,716 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 16:06:12,716 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 16:06:12,716 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 16:06:12,728 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1686, 417), (1692, 421), (1697, 426)]
+2025-09-04 16:06:12,728 - gui.main_window - INFO - Updated display to: Positions: (1686, 417), (1692, 421), (1697, 426) (3/3)
+2025-09-04 16:06:12,733 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 16:06:12,737 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 16:06:12,738 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 16:06:12,755 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 16:06:12,755 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 16:06:12,756 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 16:06:12,756 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 16:06:12,756 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 16:06:12,756 - gui.main_window - INFO - Main window initialized
+2025-09-04 16:06:12,756 - cyclops - INFO - Application started successfully
+2025-09-04 16:24:34,338 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 16:24:34,506 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 16:24:34,507 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 16:24:34,507 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 16:24:34,507 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 16:24:34,507 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 16:24:34,507 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 16:24:34,507 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 16:24:34,507 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 16:24:34,507 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 16:24:34,507 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 16:24:34,508 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 16:24:34,508 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 16:24:34,508 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 16:24:34,508 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 16:24:34,508 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 16:24:34,508 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 16:24:34,508 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 16:24:34,508 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 16:24:34,508 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 16:24:34,508 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 16:24:34,508 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 16:24:34,523 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1686, 417), (1692, 421), (1697, 426)]
+2025-09-04 16:24:34,523 - gui.main_window - INFO - Updated display to: Positions: (1686, 417), (1692, 421), (1697, 426) (3/3)
+2025-09-04 16:24:34,529 - gui.main_window - INFO - Updated rune search region display: Region: (1535, 227) - 128x169
+2025-09-04 16:24:34,534 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 16:24:34,534 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 16:24:34,554 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 16:24:34,554 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 16:24:34,554 - gui.region_selector - INFO - Region overlay created at (1535, 227) - Border only
+2025-09-04 16:24:34,554 - gui.main_window - INFO - Rune persistent overlay created at (1535, 227) - 128x169
+2025-09-04 16:24:34,555 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 16:24:34,555 - gui.main_window - INFO - Main window initialized
+2025-09-04 16:24:34,555 - cyclops - INFO - Application started successfully
+2025-09-04 16:24:40,396 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 16:24:40,399 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 16:24:41,528 - gui.region_selector - INFO - Recorded rune target position 1 at (1584, 437)
+2025-09-04 16:24:41,870 - gui.region_selector - INFO - Recorded rune target position 2 at (1591, 437)
+2025-09-04 16:24:42,288 - gui.region_selector - INFO - Recorded final rune target position 3 at (1595, 441)
+2025-09-04 16:24:43,819 - gui.main_window - INFO - Rune position recording callback received: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 16:24:43,819 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 16:24:43,824 - gui.main_window - INFO - Adding rune position 1: (1584, 437)
+2025-09-04 16:24:43,826 - automation.rune_creation - INFO - Added rune position: (1584, 437)
+2025-09-04 16:24:43,829 - gui.main_window - INFO - Successfully added rune position 1: (1584, 437)
+2025-09-04 16:24:43,832 - gui.main_window - INFO - Adding rune position 2: (1591, 437)
+2025-09-04 16:24:43,834 - automation.rune_creation - INFO - Added rune position: (1591, 437)
+2025-09-04 16:24:43,835 - gui.main_window - INFO - Successfully added rune position 2: (1591, 437)
+2025-09-04 16:24:43,837 - gui.main_window - INFO - Adding rune position 3: (1595, 441)
+2025-09-04 16:24:43,841 - automation.rune_creation - INFO - Added rune position: (1595, 441)
+2025-09-04 16:24:43,845 - gui.main_window - INFO - Successfully added rune position 3: (1595, 441)
+2025-09-04 16:24:43,847 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 16:24:43,848 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 16:24:47,377 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 16:24:51,460 - gui.region_selector - INFO - Region selected: X:1418, Y:207, W:150, H:371
+2025-09-04 16:24:53,044 - gui.main_window - INFO - Rune search region selected: (1418, 207) - 150x371
+2025-09-04 16:24:53,044 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 16:24:53,063 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 16:24:53,066 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 16:24:53,067 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 16:24:58,044 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 16:24:58,081 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(32), y=np.int64(41)), absolute: (1450, 248)
+2025-09-04 16:24:58,082 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 16:24:58,082 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1450, 248)
+2025-09-04 16:25:06,569 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 16:25:06,569 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 16:25:06,598 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(32), y=np.int64(41)), absolute: (1450, 248)
+2025-09-04 16:25:06,598 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 16:25:06,598 - automation.rune_creation - INFO - Found blank rune at (1450, 248)
+2025-09-04 16:25:06,598 - automation.rune_creation - INFO - Selected target position: (1591, 437)
+2025-09-04 16:25:06,598 - automation.rune_creation - INFO - Performing drag and drop from (1450, 248) to (1591, 437)...
+2025-09-04 16:25:08,917 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 16:25:10,119 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 16:25:10,119 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 17:23:56,564 - automation.workflow_manager - INFO - Stopping all workflows...
+2025-09-04 17:23:56,564 - automation.workflow_manager - INFO - All workflows stopped
+2025-09-04 17:23:56,570 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 17:23:56,577 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 17:23:56,578 - utils.config_manager - INFO - Configuration saved to C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 17:23:57,506 - gui.main_window - INFO - Configuration saved
+2025-09-04 17:23:57,506 - gui.main_window - INFO - Application closing
+2025-09-04 17:23:57,565 - cyclops - INFO - Application closed
+2025-09-04 17:30:26,666 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 17:30:26,835 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 17:30:26,835 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 17:30:26,835 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 17:30:26,835 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 17:30:26,835 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 17:30:26,835 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 17:30:26,835 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 17:30:26,835 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 17:30:26,835 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 17:30:26,835 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 17:30:26,836 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 17:30:26,836 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 17:30:26,836 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 17:30:26,836 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 17:30:26,836 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 17:30:26,836 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 17:30:26,836 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 17:30:26,836 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 17:30:26,836 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 17:30:26,836 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 17:30:26,836 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 17:30:26,847 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 17:30:26,847 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 17:30:26,852 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 17:30:26,855 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 17:30:26,855 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 17:30:26,870 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 17:30:26,871 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 17:30:26,871 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 17:30:26,871 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 17:30:26,872 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 17:30:26,872 - gui.main_window - INFO - Main window initialized
+2025-09-04 17:30:26,872 - cyclops - INFO - Application started successfully
+2025-09-04 17:30:42,449 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 17:30:42,452 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 17:30:43,566 - gui.region_selector - INFO - Recorded rune target position 1 at (1490, 341)
+2025-09-04 17:30:43,856 - gui.region_selector - INFO - Recorded rune target position 2 at (1490, 336)
+2025-09-04 17:30:44,176 - gui.region_selector - INFO - Recorded final rune target position 3 at (1497, 332)
+2025-09-04 17:30:45,707 - gui.main_window - INFO - Rune position recording callback received: [(1490, 341), (1490, 336), (1497, 332)]
+2025-09-04 17:30:45,707 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 17:30:45,711 - gui.main_window - INFO - Adding rune position 1: (1490, 341)
+2025-09-04 17:30:45,712 - automation.rune_creation - INFO - Added rune position: (1490, 341)
+2025-09-04 17:30:45,715 - gui.main_window - INFO - Successfully added rune position 1: (1490, 341)
+2025-09-04 17:30:45,717 - gui.main_window - INFO - Adding rune position 2: (1490, 336)
+2025-09-04 17:30:45,721 - automation.rune_creation - INFO - Added rune position: (1490, 336)
+2025-09-04 17:30:45,723 - gui.main_window - INFO - Successfully added rune position 2: (1490, 336)
+2025-09-04 17:30:45,725 - gui.main_window - INFO - Adding rune position 3: (1497, 332)
+2025-09-04 17:30:45,728 - automation.rune_creation - INFO - Added rune position: (1497, 332)
+2025-09-04 17:30:45,730 - gui.main_window - INFO - Successfully added rune position 3: (1497, 332)
+2025-09-04 17:30:45,733 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1490, 341), (1490, 336), (1497, 332)]
+2025-09-04 17:30:45,735 - gui.main_window - INFO - Updated display to: Positions: (1490, 341), (1490, 336), (1497, 332) (3/3)
+2025-09-04 17:30:49,064 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 17:30:50,685 - gui.region_selector - INFO - Region selected: X:1279, Y:218, W:192, H:149
+2025-09-04 17:30:51,495 - gui.main_window - INFO - Rune search region selected: (1279, 218) - 192x149
+2025-09-04 17:30:51,495 - gui.main_window - INFO - Updated rune search region display: Region: (1279, 218) - 192x149
+2025-09-04 17:30:51,510 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 17:30:51,513 - gui.region_selector - INFO - Region overlay created at (1279, 218) - Border only
+2025-09-04 17:30:51,514 - gui.main_window - INFO - Rune persistent overlay created at (1279, 218) - 192x149
+2025-09-04 17:30:53,899 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 17:30:53,940 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(55), y=np.int64(36)), absolute: (1334, 254)
+2025-09-04 17:30:53,940 - automation.rune_creation - INFO - Search region: (1279, 218) - 192x149
+2025-09-04 17:30:53,941 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1334, 254)
+2025-09-04 17:31:02,040 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 17:31:02,040 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 17:31:02,065 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(55), y=np.int64(36)), absolute: (1334, 254)
+2025-09-04 17:31:02,066 - automation.rune_creation - INFO - Search region: (1279, 218) - 192x149
+2025-09-04 17:31:02,066 - automation.rune_creation - INFO - Found blank rune at (1334, 254)
+2025-09-04 17:31:02,066 - automation.rune_creation - INFO - Selected target position: (1490, 336)
+2025-09-04 17:31:02,066 - automation.rune_creation - INFO - Performing drag and drop from (1334, 254) to (1490, 336)...
+2025-09-04 17:31:05,445 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 17:31:06,647 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 17:31:06,647 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:01:25,179 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 18:01:25,347 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:01:25,347 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:01:25,347 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 18:01:25,347 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 18:01:25,347 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 18:01:25,347 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:01:25,347 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 18:01:25,347 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 18:01:25,347 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:01:25,347 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 18:01:25,348 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 18:01:25,348 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 18:01:25,348 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 18:01:25,348 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:01:25,348 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 18:01:25,348 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 18:01:25,348 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 18:01:25,348 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 18:01:25,348 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 18:01:25,348 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 18:01:25,348 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 18:01:25,358 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 18:01:25,358 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 18:01:25,365 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 18:01:25,370 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 18:01:25,370 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 18:01:25,386 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 18:01:25,386 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 18:01:25,386 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 18:01:25,386 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 18:01:25,386 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 18:01:25,387 - gui.main_window - INFO - Main window initialized
+2025-09-04 18:01:25,387 - cyclops - INFO - Application started successfully
+2025-09-04 18:01:32,178 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 18:01:32,181 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 18:01:33,178 - gui.region_selector - INFO - Recorded rune target position 1 at (1489, 339)
+2025-09-04 18:01:33,863 - gui.region_selector - INFO - Recorded rune target position 2 at (1493, 338)
+2025-09-04 18:01:34,391 - gui.region_selector - INFO - Recorded final rune target position 3 at (1499, 335)
+2025-09-04 18:01:35,923 - gui.main_window - INFO - Rune position recording callback received: [(1489, 339), (1493, 338), (1499, 335)]
+2025-09-04 18:01:35,923 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:01:35,925 - gui.main_window - INFO - Adding rune position 1: (1489, 339)
+2025-09-04 18:01:35,927 - automation.rune_creation - INFO - Added rune position: (1489, 339)
+2025-09-04 18:01:35,929 - gui.main_window - INFO - Successfully added rune position 1: (1489, 339)
+2025-09-04 18:01:35,932 - gui.main_window - INFO - Adding rune position 2: (1493, 338)
+2025-09-04 18:01:35,934 - automation.rune_creation - INFO - Added rune position: (1493, 338)
+2025-09-04 18:01:35,936 - gui.main_window - INFO - Successfully added rune position 2: (1493, 338)
+2025-09-04 18:01:35,939 - gui.main_window - INFO - Adding rune position 3: (1499, 335)
+2025-09-04 18:01:35,942 - automation.rune_creation - INFO - Added rune position: (1499, 335)
+2025-09-04 18:01:35,943 - gui.main_window - INFO - Successfully added rune position 3: (1499, 335)
+2025-09-04 18:01:35,945 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1489, 339), (1493, 338), (1499, 335)]
+2025-09-04 18:01:35,948 - gui.main_window - INFO - Updated display to: Positions: (1489, 339), (1493, 338), (1499, 335) (3/3)
+2025-09-04 18:01:39,900 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 18:01:41,958 - gui.region_selector - INFO - Region selected: X:1308, Y:213, W:142, H:94
+2025-09-04 18:01:44,041 - gui.main_window - INFO - Rune search region selected: (1308, 213) - 142x94
+2025-09-04 18:01:44,042 - gui.main_window - INFO - Updated rune search region display: Region: (1308, 213) - 142x94
+2025-09-04 18:01:44,058 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 18:01:44,059 - gui.region_selector - INFO - Region overlay created at (1308, 213) - Border only
+2025-09-04 18:01:44,060 - gui.main_window - INFO - Rune persistent overlay created at (1308, 213) - 142x94
+2025-09-04 18:01:53,872 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:01:53,872 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:01:53,914 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(26), y=np.int64(41)), absolute: (1334, 254)
+2025-09-04 18:01:53,915 - automation.rune_creation - INFO - Search region: (1308, 213) - 142x94
+2025-09-04 18:01:53,915 - automation.rune_creation - INFO - Found blank rune at (1334, 254)
+2025-09-04 18:01:53,915 - automation.rune_creation - INFO - Selected target position: (1499, 335)
+2025-09-04 18:01:53,915 - automation.rune_creation - INFO - Ensuring VM window focus at blank rune position (1334, 254)
+2025-09-04 18:01:56,331 - automation.rune_creation - INFO - Performing drag and drop from (1334, 254) to (1499, 335)...
+2025-09-04 18:01:59,706 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:02:00,907 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:02:00,907 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:02:11,914 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:02:11,914 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:02:11,939 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(26), y=np.int64(41)), absolute: (1334, 254)
+2025-09-04 18:02:11,939 - automation.rune_creation - INFO - Search region: (1308, 213) - 142x94
+2025-09-04 18:02:11,940 - automation.rune_creation - INFO - Found blank rune at (1334, 254)
+2025-09-04 18:02:11,941 - automation.rune_creation - INFO - Selected target position: (1493, 338)
+2025-09-04 18:02:11,942 - automation.rune_creation - INFO - Ensuring VM window focus at blank rune position (1334, 254)
+2025-09-04 18:02:14,358 - automation.rune_creation - INFO - Performing drag and drop from (1334, 254) to (1493, 338)...
+2025-09-04 18:02:17,734 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:02:18,936 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:02:18,936 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:06:24,326 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 18:06:24,492 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:06:24,492 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:06:24,492 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 18:06:24,492 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 18:06:24,492 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 18:06:24,493 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:06:24,493 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 18:06:24,493 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 18:06:24,493 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:06:24,493 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 18:06:24,493 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 18:06:24,493 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 18:06:24,493 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 18:06:24,493 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:06:24,494 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 18:06:24,494 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 18:06:24,494 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 18:06:24,494 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 18:06:24,494 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 18:06:24,494 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 18:06:24,494 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 18:06:24,505 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 18:06:24,505 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 18:06:24,509 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 18:06:24,512 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 18:06:24,513 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 18:06:24,528 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 18:06:24,528 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 18:06:24,528 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 18:06:24,528 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 18:06:24,529 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 18:06:24,530 - gui.main_window - INFO - Main window initialized
+2025-09-04 18:06:24,530 - cyclops - INFO - Application started successfully
+2025-09-04 18:07:02,836 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 18:07:02,839 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 18:07:03,540 - gui.region_selector - INFO - Recorded rune target position 1 at (1721, 396)
+2025-09-04 18:07:03,787 - gui.region_selector - INFO - Recorded rune target position 2 at (1721, 396)
+2025-09-04 18:07:04,224 - gui.region_selector - INFO - Recorded final rune target position 3 at (1724, 394)
+2025-09-04 18:07:05,746 - gui.main_window - INFO - Rune position recording callback received: [(1721, 396), (1721, 396), (1724, 394)]
+2025-09-04 18:07:05,747 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:07:05,750 - gui.main_window - INFO - Adding rune position 1: (1721, 396)
+2025-09-04 18:07:05,753 - automation.rune_creation - INFO - Added rune position: (1721, 396)
+2025-09-04 18:07:05,755 - gui.main_window - INFO - Successfully added rune position 1: (1721, 396)
+2025-09-04 18:07:05,759 - gui.main_window - INFO - Adding rune position 2: (1721, 396)
+2025-09-04 18:07:05,762 - automation.rune_creation - INFO - Added rune position: (1721, 396)
+2025-09-04 18:07:05,765 - gui.main_window - INFO - Successfully added rune position 2: (1721, 396)
+2025-09-04 18:07:05,768 - gui.main_window - INFO - Adding rune position 3: (1724, 394)
+2025-09-04 18:07:05,771 - automation.rune_creation - INFO - Added rune position: (1724, 394)
+2025-09-04 18:07:05,775 - gui.main_window - INFO - Successfully added rune position 3: (1724, 394)
+2025-09-04 18:07:05,777 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1721, 396), (1721, 396), (1724, 394)]
+2025-09-04 18:07:05,780 - gui.main_window - INFO - Updated display to: Positions: (1721, 396), (1721, 396), (1724, 394) (3/3)
+2025-09-04 18:07:09,851 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 18:07:11,111 - gui.region_selector - INFO - Region selected: X:1536, Y:280, W:134, H:71
+2025-09-04 18:07:12,129 - gui.main_window - INFO - Rune search region selected: (1536, 280) - 134x71
+2025-09-04 18:07:12,130 - gui.main_window - INFO - Updated rune search region display: Region: (1536, 280) - 134x71
+2025-09-04 18:07:12,145 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 18:07:12,147 - gui.region_selector - INFO - Region overlay created at (1536, 280) - Border only
+2025-09-04 18:07:12,148 - gui.main_window - INFO - Rune persistent overlay created at (1536, 280) - 134x71
+2025-09-04 18:07:15,227 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 18:07:15,259 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(25), y=np.int64(36)), absolute: (1561, 316)
+2025-09-04 18:07:15,259 - automation.rune_creation - INFO - Search region: (1536, 280) - 134x71
+2025-09-04 18:07:15,260 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1561, 316)
+2025-09-04 18:07:17,923 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:07:17,923 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:07:17,924 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:07:17,946 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(25), y=np.int64(36)), absolute: (1561, 316)
+2025-09-04 18:07:17,947 - automation.rune_creation - INFO - Search region: (1536, 280) - 134x71
+2025-09-04 18:07:17,947 - automation.rune_creation - INFO - Found blank rune at (1561, 316)
+2025-09-04 18:07:17,947 - automation.rune_creation - INFO - Selected target position: (1721, 396)
+2025-09-04 18:07:17,947 - automation.rune_creation - INFO - Clicking on blank rune at (1561, 316) to ensure VM window focus
+2025-09-04 18:07:18,906 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:07:19,207 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:07:19,207 - automation.rune_creation - INFO - Performing drag and drop from (1561, 316) to (1721, 396)...
+2025-09-04 18:07:22,582 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:07:23,784 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:07:23,784 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:29:49,960 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 18:29:50,150 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:29:50,150 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:29:50,150 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 18:29:50,150 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 18:29:50,150 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 18:29:50,150 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:29:50,150 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 18:29:50,150 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 18:29:50,151 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 18:29:50,151 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:29:50,151 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 18:29:50,151 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 18:29:50,151 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 18:29:50,151 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 18:29:50,151 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:29:50,151 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 18:29:50,151 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 18:29:50,151 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 18:29:50,151 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 18:29:50,151 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 18:29:50,151 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 18:29:50,151 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 18:29:50,159 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 18:29:50,160 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 18:29:50,165 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 18:29:50,172 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 18:29:50,186 - gui.main_window - INFO - Loaded 25 windows
+2025-09-04 18:29:50,187 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 18:29:50,187 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 18:29:50,201 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 18:29:50,202 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 18:29:50,202 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 18:29:50,202 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 18:29:50,202 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 18:29:50,202 - gui.main_window - INFO - Main window initialized
+2025-09-04 18:29:50,202 - cyclops - INFO - Application started successfully
+2025-09-04 18:29:58,670 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 18:29:58,674 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 18:29:59,796 - gui.region_selector - INFO - Recorded rune target position 1 at (1637, 381)
+2025-09-04 18:30:00,065 - gui.region_selector - INFO - Recorded rune target position 2 at (1638, 381)
+2025-09-04 18:30:00,369 - gui.region_selector - INFO - Recorded final rune target position 3 at (1643, 373)
+2025-09-04 18:30:01,899 - gui.main_window - INFO - Rune position recording callback received: [(1637, 381), (1638, 381), (1643, 373)]
+2025-09-04 18:30:01,899 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:30:01,903 - gui.main_window - INFO - Adding rune position 1: (1637, 381)
+2025-09-04 18:30:01,905 - automation.rune_creation - INFO - Added rune position: (1637, 381)
+2025-09-04 18:30:01,909 - gui.main_window - INFO - Successfully added rune position 1: (1637, 381)
+2025-09-04 18:30:01,912 - gui.main_window - INFO - Adding rune position 2: (1638, 381)
+2025-09-04 18:30:01,915 - automation.rune_creation - INFO - Added rune position: (1638, 381)
+2025-09-04 18:30:01,916 - gui.main_window - INFO - Successfully added rune position 2: (1638, 381)
+2025-09-04 18:30:01,919 - gui.main_window - INFO - Adding rune position 3: (1643, 373)
+2025-09-04 18:30:01,921 - automation.rune_creation - INFO - Added rune position: (1643, 373)
+2025-09-04 18:30:01,923 - gui.main_window - INFO - Successfully added rune position 3: (1643, 373)
+2025-09-04 18:30:01,924 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1637, 381), (1638, 381), (1643, 373)]
+2025-09-04 18:30:01,926 - gui.main_window - INFO - Updated display to: Positions: (1637, 381), (1638, 381), (1643, 373) (3/3)
+2025-09-04 18:30:04,769 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 18:30:06,292 - gui.region_selector - INFO - Region selected: X:1434, Y:256, W:177, H:95
+2025-09-04 18:30:07,685 - gui.main_window - INFO - Rune search region selected: (1434, 256) - 177x95
+2025-09-04 18:30:07,686 - gui.main_window - INFO - Updated rune search region display: Region: (1434, 256) - 177x95
+2025-09-04 18:30:07,705 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 18:30:07,707 - gui.region_selector - INFO - Region overlay created at (1434, 256) - Border only
+2025-09-04 18:30:07,708 - gui.main_window - INFO - Rune persistent overlay created at (1434, 256) - 177x95
+2025-09-04 18:30:10,184 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 18:30:10,211 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(44), y=np.int64(43)), absolute: (1478, 299)
+2025-09-04 18:30:10,211 - automation.rune_creation - INFO - Search region: (1434, 256) - 177x95
+2025-09-04 18:30:10,212 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1478, 299)
+2025-09-04 18:30:20,253 - gui.main_window - INFO - Testing window focus for: 'Lucas 2'
+2025-09-04 18:30:20,255 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'Lucas 2')
+2025-09-04 18:30:20,256 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:30:20,460 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:30:41,118 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:30:41,118 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:30:41,119 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:30:41,139 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(44), y=np.int64(43)), absolute: (1478, 299)
+2025-09-04 18:30:41,139 - automation.rune_creation - INFO - Search region: (1434, 256) - 177x95
+2025-09-04 18:30:41,139 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:30:41,139 - automation.rune_creation - INFO - Selected target position: (1638, 381)
+2025-09-04 18:30:41,140 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:30:42,099 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:30:42,400 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:30:42,400 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1638, 381)...
+2025-09-04 18:30:45,774 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:30:46,976 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:30:46,976 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:32:04,824 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 18:32:04,999 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:32:04,999 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:32:04,999 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 18:32:04,999 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 18:32:04,999 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 18:32:04,999 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:32:05,000 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 18:32:05,000 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 18:32:05,000 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 18:32:05,000 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:32:05,000 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 18:32:05,000 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 18:32:05,000 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 18:32:05,000 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 18:32:05,000 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:32:05,000 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 18:32:05,000 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 18:32:05,000 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 18:32:05,001 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 18:32:05,001 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 18:32:05,001 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 18:32:05,001 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 18:32:05,010 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 18:32:05,010 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 18:32:05,014 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 18:32:05,021 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 18:32:05,025 - gui.main_window - INFO - Loaded 25 windows
+2025-09-04 18:32:05,026 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 18:32:05,026 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 18:32:05,042 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 18:32:05,042 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 18:32:05,043 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 18:32:05,043 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 18:32:05,043 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 18:32:05,043 - gui.main_window - INFO - Main window initialized
+2025-09-04 18:32:05,043 - cyclops - INFO - Application started successfully
+2025-09-04 18:32:12,870 - gui.main_window - INFO - Testing window focus for: 'Lucas  2'
+2025-09-04 18:32:12,872 - core.window_focus - WARNING - No window found matching 'Lucas  2'
+2025-09-04 18:32:20,422 - gui.main_window - INFO - Testing window focus for: 'Lucas 2'
+2025-09-04 18:32:20,424 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'Lucas 2')
+2025-09-04 18:32:20,424 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:32:20,630 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:32:26,683 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 18:32:26,686 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 18:32:28,120 - gui.region_selector - INFO - Recorded rune target position 1 at (1215, 774)
+2025-09-04 18:32:28,928 - gui.region_selector - INFO - Recorded rune target position 2 at (1207, 775)
+2025-09-04 18:32:29,514 - gui.region_selector - INFO - Recorded final rune target position 3 at (1219, 775)
+2025-09-04 18:32:30,135 - gui.region_selector - INFO - Recorded final rune target position 3 at (1209, 776)
+2025-09-04 18:32:31,045 - gui.main_window - INFO - Rune position recording callback received: [(1215, 774), (1207, 775), (1219, 775), (1209, 776)]
+2025-09-04 18:32:31,045 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:32:31,049 - gui.main_window - INFO - Adding rune position 1: (1215, 774)
+2025-09-04 18:32:31,053 - automation.rune_creation - INFO - Added rune position: (1215, 774)
+2025-09-04 18:32:31,055 - gui.main_window - INFO - Successfully added rune position 1: (1215, 774)
+2025-09-04 18:32:31,056 - gui.main_window - INFO - Adding rune position 2: (1207, 775)
+2025-09-04 18:32:31,060 - automation.rune_creation - INFO - Added rune position: (1207, 775)
+2025-09-04 18:32:31,063 - gui.main_window - INFO - Successfully added rune position 2: (1207, 775)
+2025-09-04 18:32:31,066 - gui.main_window - INFO - Adding rune position 3: (1219, 775)
+2025-09-04 18:32:31,070 - automation.rune_creation - INFO - Added rune position: (1219, 775)
+2025-09-04 18:32:31,073 - gui.main_window - INFO - Successfully added rune position 3: (1219, 775)
+2025-09-04 18:32:31,076 - gui.main_window - INFO - Adding rune position 4: (1209, 776)
+2025-09-04 18:32:31,078 - automation.rune_creation - WARNING - Maximum of 3 rune positions allowed
+2025-09-04 18:32:31,081 - gui.main_window - WARNING - Failed to add rune position 4: (1209, 776)
+2025-09-04 18:32:31,083 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1215, 774), (1207, 775), (1219, 775)]
+2025-09-04 18:32:31,085 - gui.main_window - INFO - Updated display to: Positions: (1215, 774), (1207, 775), (1219, 775) (3/3)
+2025-09-04 18:32:42,166 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:32:42,166 - gui.main_window - INFO - Updating rune positions display. Current positions: []
+2025-09-04 18:32:42,168 - gui.main_window - INFO - Updated display to: No positions configured (0/3)
+2025-09-04 18:32:44,466 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 18:32:44,469 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 18:32:49,080 - gui.region_selector - INFO - Recorded rune target position 1 at (1636, 381)
+2025-09-04 18:32:49,403 - gui.region_selector - INFO - Recorded rune target position 2 at (1636, 381)
+2025-09-04 18:32:49,801 - gui.region_selector - INFO - Recorded final rune target position 3 at (1641, 380)
+2025-09-04 18:32:51,323 - gui.main_window - INFO - Rune position recording callback received: [(1636, 381), (1636, 381), (1641, 380)]
+2025-09-04 18:32:51,323 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:32:51,326 - gui.main_window - INFO - Adding rune position 1: (1636, 381)
+2025-09-04 18:32:51,326 - automation.rune_creation - INFO - Added rune position: (1636, 381)
+2025-09-04 18:32:51,330 - gui.main_window - INFO - Successfully added rune position 1: (1636, 381)
+2025-09-04 18:32:51,333 - gui.main_window - INFO - Adding rune position 2: (1636, 381)
+2025-09-04 18:32:51,336 - automation.rune_creation - INFO - Added rune position: (1636, 381)
+2025-09-04 18:32:51,338 - gui.main_window - INFO - Successfully added rune position 2: (1636, 381)
+2025-09-04 18:32:51,340 - gui.main_window - INFO - Adding rune position 3: (1641, 380)
+2025-09-04 18:32:51,343 - automation.rune_creation - INFO - Added rune position: (1641, 380)
+2025-09-04 18:32:51,345 - gui.main_window - INFO - Successfully added rune position 3: (1641, 380)
+2025-09-04 18:32:51,347 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1636, 381), (1636, 381), (1641, 380)]
+2025-09-04 18:32:51,350 - gui.main_window - INFO - Updated display to: Positions: (1636, 381), (1636, 381), (1641, 380) (3/3)
+2025-09-04 18:32:53,925 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 18:32:55,016 - gui.region_selector - INFO - Region selected: X:1449, Y:259, W:58, H:62
+2025-09-04 18:32:56,965 - gui.main_window - INFO - Rune search region selected: (1449, 259) - 58x62
+2025-09-04 18:32:56,965 - gui.main_window - INFO - Updated rune search region display: Region: (1449, 259) - 58x62
+2025-09-04 18:32:56,981 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 18:32:56,982 - gui.region_selector - INFO - Region overlay created at (1449, 259) - Border only
+2025-09-04 18:32:56,983 - gui.main_window - INFO - Rune persistent overlay created at (1449, 259) - 58x62
+2025-09-04 18:32:58,572 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 18:32:58,612 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(29), y=np.int64(40)), absolute: (1478, 299)
+2025-09-04 18:32:58,612 - automation.rune_creation - INFO - Search region: (1449, 259) - 58x62
+2025-09-04 18:32:58,613 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1478, 299)
+2025-09-04 18:33:03,875 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:33:03,875 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:33:03,876 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:33:03,896 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(29), y=np.int64(40)), absolute: (1478, 299)
+2025-09-04 18:33:03,896 - automation.rune_creation - INFO - Search region: (1449, 259) - 58x62
+2025-09-04 18:33:03,897 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:33:03,897 - automation.rune_creation - INFO - Selected target position: (1636, 381)
+2025-09-04 18:33:03,897 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:33:04,857 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:33:05,157 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:33:05,157 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1636, 381)...
+2025-09-04 18:33:08,533 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:33:09,735 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:33:09,735 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:33:27,615 - gui.main_window - INFO - Updated health_monitoring.enabled = False
+2025-09-04 18:33:28,441 - gui.main_window - INFO - Updated rune_creation.enabled = True
+2025-09-04 18:33:31,845 - gui.main_window - INFO - Starting automations: ['rune_creation']
+2025-09-04 18:33:31,845 - automation.workflow_manager - INFO - Created custom workflow: custom_automation
+2025-09-04 18:33:31,846 - automation.workflow_manager - INFO - Starting workflow: custom_automation
+2025-09-04 18:33:31,846 - automation.workflow_manager - INFO - Running automation: rune_creation
+2025-09-04 18:33:31,846 - automation.workflow_manager - INFO - Started automation: rune_creation
+2025-09-04 18:33:31,847 - automation.rune_creation - INFO - Starting rune creation automation
+2025-09-04 18:33:31,847 - automation.workflow_manager - INFO - Workflow 'custom_automation' started successfully
+2025-09-04 18:33:31,847 - automation.rune_creation - INFO - Next rune creation scheduled in 3.3 minutes
+2025-09-04 18:36:49,919 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:36:49,919 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:36:49,954 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(29), y=np.int64(40)), absolute: (1478, 299)
+2025-09-04 18:36:49,954 - automation.rune_creation - INFO - Search region: (1449, 259) - 58x62
+2025-09-04 18:36:49,955 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:36:49,955 - automation.rune_creation - INFO - Selected target position: (1636, 381)
+2025-09-04 18:36:49,955 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:36:50,915 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:36:51,216 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:36:51,216 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1636, 381)...
+2025-09-04 18:36:54,595 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:36:55,797 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:36:55,797 - automation.rune_creation - INFO - Rune created successfully (total: 1)
+2025-09-04 18:36:55,798 - automation.rune_creation - INFO - Next rune creation scheduled in 2.2 minutes
+2025-09-04 18:38:55,126 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 18:38:55,294 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:38:55,294 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:38:55,294 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 18:38:55,294 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 18:38:55,294 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 18:38:55,294 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:38:55,295 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 18:38:55,295 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 18:38:55,295 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 18:38:55,295 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:38:55,295 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 18:38:55,295 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 18:38:55,295 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 18:38:55,295 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 18:38:55,295 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:38:55,295 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 18:38:55,295 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 18:38:55,295 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 18:38:55,295 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 18:38:55,295 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 18:38:55,295 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 18:38:55,295 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 18:38:55,304 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 18:38:55,304 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 18:38:55,308 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 18:38:55,313 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 18:38:55,318 - gui.main_window - INFO - Loaded 25 windows
+2025-09-04 18:38:55,319 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 18:38:55,319 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 18:38:55,331 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 18:38:55,331 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 18:38:55,331 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 18:38:55,332 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 18:38:55,332 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 18:38:55,332 - gui.main_window - INFO - Main window initialized
+2025-09-04 18:38:55,332 - cyclops - INFO - Application started successfully
+2025-09-04 18:39:07,611 - gui.main_window - INFO - Testing window focus for: 'Lucas 2'
+2025-09-04 18:39:07,614 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'Lucas 2')
+2025-09-04 18:39:07,614 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:39:07,822 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:39:12,571 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 18:39:12,607 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:39:12,607 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:39:12,607 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1478, 299)
+2025-09-04 18:39:14,959 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:39:14,959 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:39:14,960 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:14,960 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:14,962 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:39:14,962 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:39:15,170 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:39:15,670 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:39:15,670 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:39:15,671 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:39:15,699 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:39:15,699 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:39:15,700 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:39:15,701 - automation.rune_creation - INFO - Selected target position: (1595, 441)
+2025-09-04 18:39:15,701 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:39:16,656 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:39:16,957 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:39:16,957 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1595, 441)...
+2025-09-04 18:39:20,329 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:39:21,531 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:39:21,531 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:39:25,977 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:39:25,977 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:39:25,978 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:25,978 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:25,979 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:39:25,979 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:39:26,184 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:39:26,684 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:39:26,684 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:39:26,685 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:39:26,712 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:39:26,712 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:39:26,713 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:39:26,713 - automation.rune_creation - INFO - Selected target position: (1595, 441)
+2025-09-04 18:39:26,713 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:39:27,671 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:39:27,972 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:39:27,972 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1595, 441)...
+2025-09-04 18:39:31,347 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:39:32,549 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:39:32,549 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:39:38,248 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:39:38,248 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:39:38,249 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:38,249 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:38,251 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:39:38,251 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:39:38,455 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:39:38,956 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:39:38,956 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:39:38,957 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:39:38,984 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:39:38,984 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:39:38,985 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:39:38,985 - automation.rune_creation - INFO - Selected target position: (1584, 437)
+2025-09-04 18:39:38,985 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:39:39,944 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:39:40,245 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:39:40,245 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1584, 437)...
+2025-09-04 18:39:43,628 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:39:44,829 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:39:44,829 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:39:51,480 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:39:51,480 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:39:51,481 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:51,481 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:39:51,483 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:39:51,483 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:39:51,689 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:39:52,189 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:39:52,189 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:39:52,190 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:39:52,216 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:39:52,216 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:39:52,216 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:39:52,216 - automation.rune_creation - INFO - Selected target position: (1595, 441)
+2025-09-04 18:39:52,216 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:39:53,175 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:39:53,475 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:39:53,475 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1595, 441)...
+2025-09-04 18:39:56,850 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:39:58,052 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:39:58,052 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:47:19,835 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 18:47:20,000 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:47:20,000 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:47:20,001 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 18:47:20,001 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 18:47:20,001 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 18:47:20,001 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:47:20,001 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 18:47:20,001 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 18:47:20,001 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 18:47:20,001 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:47:20,001 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 18:47:20,001 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 18:47:20,001 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 18:47:20,001 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 18:47:20,002 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:47:20,002 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 18:47:20,002 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 18:47:20,002 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 18:47:20,002 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 18:47:20,002 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 18:47:20,002 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 18:47:20,002 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 18:47:20,010 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 18:47:20,010 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 18:47:20,015 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 18:47:20,020 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 18:47:20,024 - gui.main_window - INFO - Loaded 25 windows
+2025-09-04 18:47:20,024 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 18:47:20,024 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 18:47:20,039 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 18:47:20,039 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 18:47:20,040 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 18:47:20,040 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 18:47:20,040 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 18:47:20,040 - gui.main_window - INFO - Main window initialized
+2025-09-04 18:47:20,040 - cyclops - INFO - Application started successfully
+2025-09-04 18:47:24,224 - gui.main_window - INFO - Updated rune_creation.enabled = True
+2025-09-04 18:47:35,041 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:47:35,041 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:47:35,041 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:47:35,041 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:47:35,043 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:47:35,043 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:47:35,248 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:47:35,748 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:47:35,748 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:47:35,749 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:47:35,796 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:47:35,796 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:47:35,798 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:47:35,798 - automation.rune_creation - INFO - Selected target position: (1584, 437)
+2025-09-04 18:47:35,798 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:47:36,755 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:47:37,055 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:47:37,055 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1584, 437)...
+2025-09-04 18:47:40,439 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:47:41,640 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:47:41,640 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:48:08,523 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 18:48:08,525 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 18:48:09,569 - gui.region_selector - INFO - Recorded rune target position 1 at (1639, 383)
+2025-09-04 18:48:09,823 - gui.region_selector - INFO - Recorded rune target position 2 at (1634, 370)
+2025-09-04 18:48:10,218 - gui.region_selector - INFO - Recorded final rune target position 3 at (1640, 373)
+2025-09-04 18:48:11,741 - gui.main_window - INFO - Rune position recording callback received: [(1639, 383), (1634, 370), (1640, 373)]
+2025-09-04 18:48:11,741 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:48:11,744 - gui.main_window - INFO - Adding rune position 1: (1639, 383)
+2025-09-04 18:48:11,745 - automation.rune_creation - INFO - Added rune position: (1639, 383)
+2025-09-04 18:48:11,748 - gui.main_window - INFO - Successfully added rune position 1: (1639, 383)
+2025-09-04 18:48:11,750 - gui.main_window - INFO - Adding rune position 2: (1634, 370)
+2025-09-04 18:48:11,752 - automation.rune_creation - INFO - Added rune position: (1634, 370)
+2025-09-04 18:48:11,755 - gui.main_window - INFO - Successfully added rune position 2: (1634, 370)
+2025-09-04 18:48:11,758 - gui.main_window - INFO - Adding rune position 3: (1640, 373)
+2025-09-04 18:48:11,758 - automation.rune_creation - INFO - Added rune position: (1640, 373)
+2025-09-04 18:48:11,758 - gui.main_window - INFO - Successfully added rune position 3: (1640, 373)
+2025-09-04 18:48:11,758 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1639, 383), (1634, 370), (1640, 373)]
+2025-09-04 18:48:11,759 - gui.main_window - INFO - Updated display to: Positions: (1639, 383), (1634, 370), (1640, 373) (3/3)
+2025-09-04 18:48:13,519 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:48:13,519 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:48:13,519 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:48:13,519 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:48:13,521 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:48:13,521 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:48:13,726 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:48:14,227 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:48:14,227 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:48:14,227 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:48:14,251 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:48:14,251 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:48:14,252 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:48:14,252 - automation.rune_creation - INFO - Selected target position: (1640, 373)
+2025-09-04 18:48:14,252 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:48:15,210 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:48:15,511 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:48:15,511 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1640, 373)...
+2025-09-04 18:48:18,891 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:48:20,092 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:48:20,092 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:54:07,032 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 18:54:07,210 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:54:07,211 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 18:54:07,211 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 18:54:07,211 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 18:54:07,211 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 18:54:07,211 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:54:07,211 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 18:54:07,211 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 18:54:07,211 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 18:54:07,211 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 18:54:07,211 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 18:54:07,211 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 18:54:07,211 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 18:54:07,212 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 18:54:07,212 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:54:07,212 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 18:54:07,212 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 18:54:07,212 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 18:54:07,212 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 18:54:07,212 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 18:54:07,212 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 18:54:07,212 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 18:54:07,212 - core.global_hotkeys - INFO - Global Hotkey Manager initialized
+2025-09-04 18:54:07,267 - core.global_hotkeys - INFO - Registered global hotkey: f2 - Test Rune Creation
+2025-09-04 18:54:07,268 - core.global_hotkeys - INFO - Registered global hotkey: f3 - Test Food Eating
+2025-09-04 18:54:07,268 - core.global_hotkeys - INFO - Registered global hotkey: page down - Test Image Search
+2025-09-04 18:54:07,268 - core.global_hotkeys - INFO - Registered global hotkey: page up - Test Rune Detection
+2025-09-04 18:54:07,268 - core.global_hotkeys - INFO - Global hotkey manager started
+2025-09-04 18:54:07,268 - gui.main_window - INFO - Global hotkeys registered and started
+2025-09-04 18:54:07,277 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 18:54:07,277 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 18:54:07,284 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 18:54:07,290 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 18:54:07,294 - gui.main_window - INFO - Loaded 25 windows
+2025-09-04 18:54:07,295 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 18:54:07,295 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 18:54:07,309 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 18:54:07,309 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 18:54:07,309 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 18:54:07,309 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 18:54:07,309 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 18:54:07,310 - gui.main_window - INFO - Main window initialized
+2025-09-04 18:54:07,310 - cyclops - INFO - Application started successfully
+2025-09-04 18:54:16,430 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 18:54:16,433 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 18:54:17,410 - gui.region_selector - INFO - Recorded rune target position 1 at (1640, 379)
+2025-09-04 18:54:17,882 - gui.region_selector - INFO - Recorded rune target position 2 at (1640, 379)
+2025-09-04 18:54:18,316 - gui.region_selector - INFO - Recorded final rune target position 3 at (1647, 381)
+2025-09-04 18:54:19,841 - gui.main_window - INFO - Rune position recording callback received: [(1640, 379), (1640, 379), (1647, 381)]
+2025-09-04 18:54:19,841 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 18:54:19,843 - gui.main_window - INFO - Adding rune position 1: (1640, 379)
+2025-09-04 18:54:19,845 - automation.rune_creation - INFO - Added rune position: (1640, 379)
+2025-09-04 18:54:19,847 - gui.main_window - INFO - Successfully added rune position 1: (1640, 379)
+2025-09-04 18:54:19,849 - gui.main_window - INFO - Adding rune position 2: (1640, 379)
+2025-09-04 18:54:19,851 - automation.rune_creation - INFO - Added rune position: (1640, 379)
+2025-09-04 18:54:19,854 - gui.main_window - INFO - Successfully added rune position 2: (1640, 379)
+2025-09-04 18:54:19,856 - gui.main_window - INFO - Adding rune position 3: (1647, 381)
+2025-09-04 18:54:19,859 - automation.rune_creation - INFO - Added rune position: (1647, 381)
+2025-09-04 18:54:19,861 - gui.main_window - INFO - Successfully added rune position 3: (1647, 381)
+2025-09-04 18:54:19,863 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1640, 379), (1640, 379), (1647, 381)]
+2025-09-04 18:54:19,865 - gui.main_window - INFO - Updated display to: Positions: (1640, 379), (1640, 379), (1647, 381) (3/3)
+2025-09-04 18:54:22,933 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 18:54:22,978 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:54:22,978 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:54:22,978 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1478, 299)
+2025-09-04 18:54:34,371 - core.global_hotkeys - INFO - Global hotkey pressed: f2
+2025-09-04 18:54:34,373 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:54:34,373 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 18:54:34,373 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:54:34,374 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 18:54:34,374 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:54:34,374 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:54:34,374 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:54:34,374 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 18:54:34,376 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:54:34,376 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:54:34,581 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:54:35,081 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:54:35,081 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:54:35,082 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:54:35,082 - automation.rune_creation - INFO - Blank rune image path: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:54:35,082 - automation.rune_creation - INFO - Blank rune image exists: True
+2025-09-04 18:54:35,111 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:54:35,111 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:54:35,111 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:54:35,111 - automation.rune_creation - INFO - Selected target position: (1640, 379)
+2025-09-04 18:54:35,112 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:54:36,070 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:54:36,371 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:54:36,371 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1640, 379)...
+2025-09-04 18:54:39,745 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:54:40,947 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:54:40,947 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 18:54:40,956 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 18:54:40,956 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 18:54:41,158 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 18:54:41,659 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 18:54:41,659 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 18:54:41,659 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 18:54:41,659 - automation.rune_creation - INFO - Blank rune image path: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 18:54:41,660 - automation.rune_creation - INFO - Blank rune image exists: True
+2025-09-04 18:54:41,685 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 18:54:41,685 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 18:54:41,685 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 18:54:41,686 - automation.rune_creation - INFO - Selected target position: (1647, 381)
+2025-09-04 18:54:41,686 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 18:54:42,642 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 18:54:42,943 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 18:54:42,943 - automation.rune_creation - INFO - Performing drag and drop from (1478, 299) to (1647, 381)...
+2025-09-04 18:54:46,313 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 18:54:47,515 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 18:54:47,515 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 19:01:15,646 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 19:01:15,819 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:01:15,819 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:01:15,820 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 19:01:15,820 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 19:01:15,820 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 19:01:15,820 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:01:15,820 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 19:01:15,820 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 19:01:15,820 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 19:01:15,820 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:01:15,820 - automation.workflow_manager - ERROR - Failed to initialize automations: name 'config' is not defined
+2025-09-04 19:01:15,820 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 19:01:15,821 - core.global_hotkeys - INFO - Global Hotkey Manager initialized
+2025-09-04 19:01:15,881 - core.global_hotkeys - INFO - Registered global hotkey: f2 - Test Rune Creation
+2025-09-04 19:01:15,881 - core.global_hotkeys - INFO - Registered global hotkey: f3 - Test Food Eating
+2025-09-04 19:01:15,881 - core.global_hotkeys - INFO - Registered global hotkey: page down - Test Image Search
+2025-09-04 19:01:15,881 - core.global_hotkeys - INFO - Registered global hotkey: page up - Test Rune Detection
+2025-09-04 19:01:15,881 - core.global_hotkeys - INFO - Global hotkey manager started
+2025-09-04 19:01:15,881 - gui.main_window - INFO - Global hotkeys registered and started
+2025-09-04 19:01:15,891 - gui.main_window - WARNING - Rune automation not available for display update
+2025-09-04 19:01:15,895 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 19:01:15,900 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 19:01:15,904 - gui.main_window - INFO - Loaded 25 windows
+2025-09-04 19:01:15,905 - gui.main_window - WARNING - Food automation not available for display update
+2025-09-04 19:01:15,920 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 19:01:15,921 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 19:01:15,921 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 19:01:15,921 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 19:01:15,921 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 19:01:15,921 - gui.main_window - INFO - Main window initialized
+2025-09-04 19:01:15,921 - cyclops - INFO - Application started successfully
+2025-09-04 19:01:26,341 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:01:26,341 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:01:28,342 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:01:28,342 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:01:38,067 - gui.main_window - INFO - Updated rune_creation.enabled = True
+2025-09-04 19:01:39,361 - gui.main_window - INFO - Updated food_eating.enabled = True
+2025-09-04 19:01:41,691 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:01:41,691 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:01:49,816 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:01:49,816 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:01:55,729 - gui.region_selector - INFO - Region selector initialized
+2025-09-04 19:01:57,541 - gui.region_selector - INFO - Region selected: X:1429, Y:230, W:186, H:161
+2025-09-04 19:01:58,357 - gui.main_window - INFO - Rune search region selected: (1429, 230) - 186x161
+2025-09-04 19:01:58,357 - gui.main_window - INFO - Updated rune search region display: Region: (1429, 230) - 186x161
+2025-09-04 19:01:58,377 - gui.region_selector - INFO - Region overlay destroyed
+2025-09-04 19:01:58,380 - gui.region_selector - INFO - Region overlay created at (1429, 230) - Border only
+2025-09-04 19:01:58,381 - gui.main_window - INFO - Rune persistent overlay created at (1429, 230) - 186x161
+2025-09-04 19:02:00,485 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:02:00,485 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:01,184 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:02:01,184 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:01,607 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:02:01,607 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:02,496 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:02:02,496 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:05,988 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:02:05,988 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:12,877 - core.global_hotkeys - INFO - Global hotkey pressed: f2
+2025-09-04 19:02:12,878 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:12,878 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:13,396 - core.global_hotkeys - INFO - Global hotkey pressed: f2
+2025-09-04 19:02:13,397 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:13,397 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:14,487 - core.global_hotkeys - INFO - Global hotkey pressed: f2
+2025-09-04 19:02:14,489 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:14,489 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:15,122 - core.global_hotkeys - INFO - Global hotkey pressed: f2
+2025-09-04 19:02:15,123 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:02:15,124 - gui.main_window - ERROR - Rune creation automation not available
+2025-09-04 19:04:02,713 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 19:04:02,880 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:04:02,880 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:04:02,880 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 19:04:02,881 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 19:04:02,881 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 19:04:02,881 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:04:02,881 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 19:04:02,881 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 19:04:02,881 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 19:04:02,881 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:04:02,881 - core.vmware_input_simulator - INFO - VMware Input Simulator initialized
+2025-09-04 19:04:02,881 - core.vmware_input_simulator - INFO - VMware mode: True
+2025-09-04 19:04:02,881 - core.vmware_input_simulator - INFO - Input delay: 0.2s
+2025-09-04 19:04:02,882 - core.vmware_input_simulator - INFO - Movement duration: 1.0s
+2025-09-04 19:04:02,882 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 19:04:02,882 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 19:04:02,882 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 19:04:02,882 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 19:04:02,882 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 19:04:02,882 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 19:04:02,882 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 19:04:02,883 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 19:04:02,883 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 19:04:02,883 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 19:04:02,883 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 19:04:02,883 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 19:04:02,883 - core.global_hotkeys - INFO - Global Hotkey Manager initialized
+2025-09-04 19:04:02,942 - core.global_hotkeys - INFO - Registered global hotkey: f2 - Test Rune Creation
+2025-09-04 19:04:02,942 - core.global_hotkeys - INFO - Registered global hotkey: f3 - Test Food Eating
+2025-09-04 19:04:02,943 - core.global_hotkeys - INFO - Registered global hotkey: page down - Test Image Search
+2025-09-04 19:04:02,943 - core.global_hotkeys - INFO - Registered global hotkey: page up - Test Rune Detection
+2025-09-04 19:04:02,943 - core.global_hotkeys - INFO - Global hotkey manager started
+2025-09-04 19:04:02,943 - gui.main_window - INFO - Global hotkeys registered and started
+2025-09-04 19:04:02,954 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 19:04:02,954 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 19:04:02,959 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 19:04:02,966 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 19:04:02,970 - gui.main_window - INFO - Loaded 34 windows
+2025-09-04 19:04:02,972 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 19:04:02,972 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 19:04:02,988 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 19:04:02,988 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 19:04:02,988 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 19:04:02,988 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 19:04:02,988 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 19:04:02,988 - gui.main_window - INFO - Main window initialized
+2025-09-04 19:04:02,989 - cyclops - INFO - Application started successfully
+2025-09-04 19:04:46,146 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 19:04:46,328 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:04:46,328 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:04:46,328 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 19:04:46,328 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 19:04:46,328 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 19:04:46,329 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:04:46,329 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 19:04:46,329 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 19:04:46,329 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 19:04:46,329 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:04:46,329 - core.vmware_input_simulator - INFO - VMware Input Simulator initialized
+2025-09-04 19:04:46,329 - core.vmware_input_simulator - INFO - VMware mode: True
+2025-09-04 19:04:46,329 - core.vmware_input_simulator - INFO - Input delay: 0.2s
+2025-09-04 19:04:46,329 - core.vmware_input_simulator - INFO - Movement duration: 1.0s
+2025-09-04 19:04:46,329 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 19:04:46,329 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 19:04:46,329 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 19:04:46,329 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 19:04:46,329 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 19:04:46,330 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 19:04:46,330 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 19:04:46,330 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 19:04:46,330 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 19:04:46,330 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 19:04:46,330 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 19:04:46,330 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 19:04:46,330 - core.global_hotkeys - INFO - Global Hotkey Manager initialized
+2025-09-04 19:04:46,390 - core.global_hotkeys - INFO - Registered global hotkey: f2 - Test Rune Creation
+2025-09-04 19:04:46,390 - core.global_hotkeys - INFO - Registered global hotkey: f3 - Test Food Eating
+2025-09-04 19:04:46,390 - core.global_hotkeys - INFO - Registered global hotkey: page down - Test Image Search
+2025-09-04 19:04:46,390 - core.global_hotkeys - INFO - Registered global hotkey: page up - Test Rune Detection
+2025-09-04 19:04:46,391 - core.global_hotkeys - INFO - Global hotkey manager started
+2025-09-04 19:04:46,391 - gui.main_window - INFO - Global hotkeys registered and started
+2025-09-04 19:04:46,403 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 19:04:46,403 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 19:04:46,408 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 19:04:46,416 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 19:04:46,420 - gui.main_window - INFO - Loaded 35 windows
+2025-09-04 19:04:46,422 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 19:04:46,422 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 19:04:46,436 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 19:04:46,437 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 19:04:46,437 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 19:04:46,437 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 19:04:46,437 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 19:04:46,438 - gui.main_window - INFO - Main window initialized
+2025-09-04 19:04:46,438 - cyclops - INFO - Application started successfully
+2025-09-04 19:04:52,469 - cyclops - INFO - Starting Cyclops Desktop Automation Application
+2025-09-04 19:04:52,637 - utils.config_manager - INFO - Configuration loaded from C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:04:52,637 - utils.config_manager - INFO - Configuration manager initialized with: C:\Users\Lucas\Desktop\workspace\personal\cyclops\config\default_config.json
+2025-09-04 19:04:52,637 - core.screen_capture - INFO - Screen resolution: 1920x1080
+2025-09-04 19:04:52,637 - core.ocr_engine - INFO - Tesseract path set to: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-09-04 19:04:52,637 - core.ocr_engine - INFO - OCR Engine initialized with language: eng
+2025-09-04 19:04:52,637 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:04:52,638 - core.window_focus - INFO - Window Focus Handler initialized
+2025-09-04 19:04:52,638 - core.input_simulator - INFO - Input Simulator initialized
+2025-09-04 19:04:52,638 - core.state_monitor - INFO - State Monitor initialized
+2025-09-04 19:04:52,638 - core.computer_vision - INFO - Computer Vision engine initialized
+2025-09-04 19:04:52,638 - core.vmware_input_simulator - INFO - VMware Input Simulator initialized
+2025-09-04 19:04:52,638 - core.vmware_input_simulator - INFO - VMware mode: True
+2025-09-04 19:04:52,638 - core.vmware_input_simulator - INFO - Input delay: 0.2s
+2025-09-04 19:04:52,638 - core.vmware_input_simulator - INFO - Movement duration: 1.0s
+2025-09-04 19:04:52,638 - automation.rune_creation - INFO - Loaded 3 rune positions from configuration
+2025-09-04 19:04:52,638 - automation.rune_creation - INFO - Rune Creation Automation initialized
+2025-09-04 19:04:52,639 - automation.rune_creation - INFO - Rune positions: 3 configured
+2025-09-04 19:04:52,639 - automation.rune_creation - INFO - Delay range: 2.0-5.0 minutes
+2025-09-04 19:04:52,639 - automation.rune_creation - INFO - Blank rune image: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 19:04:52,639 - automation.food_eating - INFO - Food Eating Automation initialized
+2025-09-04 19:04:52,639 - automation.food_eating - INFO - Food positions: 3 configured
+2025-09-04 19:04:52,639 - automation.food_eating - INFO - Click range: 3-6
+2025-09-04 19:04:52,639 - automation.food_eating - INFO - Delay range: 4.0-8.0 minutes
+2025-09-04 19:04:52,639 - automation.health_monitor - INFO - Health Monitor Automation initialized
+2025-09-04 19:04:52,639 - automation.workflow_manager - INFO - All automation modules initialized
+2025-09-04 19:04:52,639 - automation.workflow_manager - INFO - Workflow Manager initialized
+2025-09-04 19:04:52,639 - core.global_hotkeys - INFO - Global Hotkey Manager initialized
+2025-09-04 19:04:52,698 - core.global_hotkeys - INFO - Registered global hotkey: f2 - Test Rune Creation
+2025-09-04 19:04:52,698 - core.global_hotkeys - INFO - Registered global hotkey: f3 - Test Food Eating
+2025-09-04 19:04:52,699 - core.global_hotkeys - INFO - Registered global hotkey: page down - Test Image Search
+2025-09-04 19:04:52,699 - core.global_hotkeys - INFO - Registered global hotkey: page up - Test Rune Detection
+2025-09-04 19:04:52,700 - core.global_hotkeys - INFO - Global hotkey manager started
+2025-09-04 19:04:52,700 - gui.main_window - INFO - Global hotkeys registered and started
+2025-09-04 19:04:52,711 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1584, 437), (1591, 437), (1595, 441)]
+2025-09-04 19:04:52,711 - gui.main_window - INFO - Updated display to: Positions: (1584, 437), (1591, 437), (1595, 441) (3/3)
+2025-09-04 19:04:52,715 - gui.main_window - INFO - Updated rune search region display: Region: (1418, 207) - 150x371
+2025-09-04 19:04:52,720 - gui.main_window - INFO - Refreshing window list...
+2025-09-04 19:04:52,724 - gui.main_window - INFO - Loaded 25 windows
+2025-09-04 19:04:52,725 - gui.main_window - INFO - Updating food positions display. Current positions: [[1692, 745], [1693, 743], [1697, 742]]
+2025-09-04 19:04:52,726 - gui.main_window - INFO - Updated display to: Positions: (1692, 745), (1693, 743), (1697, 742) (3/3)
+2025-09-04 19:04:52,738 - gui.region_selector - INFO - Region overlay created at (1670, 665) - Border only
+2025-09-04 19:04:52,738 - gui.main_window - INFO - Persistent overlay created at (1670, 665) - 124x43
+2025-09-04 19:04:52,738 - gui.region_selector - INFO - Region overlay created at (1418, 207) - Border only
+2025-09-04 19:04:52,739 - gui.main_window - INFO - Rune persistent overlay created at (1418, 207) - 150x371
+2025-09-04 19:04:52,739 - automation.workflow_manager - INFO - Registered callback for health_monitor
+2025-09-04 19:04:52,739 - gui.main_window - INFO - Main window initialized
+2025-09-04 19:04:52,740 - cyclops - INFO - Application started successfully
+2025-09-04 19:04:57,170 - gui.main_window - INFO - Testing blank rune detection...
+2025-09-04 19:04:57,211 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 19:04:57,211 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 19:04:57,212 - gui.main_window - INFO - SUCCESS: BLANK IMAGE FOUND at (1478, 299)
+2025-09-04 19:05:02,175 - gui.main_window - INFO - Starting rune position recording...
+2025-09-04 19:05:02,178 - gui.region_selector - INFO - Started recording 3 rune target positions
+2025-09-04 19:05:03,034 - gui.region_selector - INFO - Recorded rune target position 1 at (1633, 383)
+2025-09-04 19:05:03,278 - gui.region_selector - INFO - Recorded rune target position 2 at (1633, 383)
+2025-09-04 19:05:03,589 - gui.region_selector - INFO - Recorded final rune target position 3 at (1639, 379)
+2025-09-04 19:05:05,112 - gui.main_window - INFO - Rune position recording callback received: [(1633, 383), (1633, 383), (1639, 379)]
+2025-09-04 19:05:05,112 - automation.rune_creation - INFO - Cleared all rune positions
+2025-09-04 19:05:05,114 - gui.main_window - INFO - Adding rune position 1: (1633, 383)
+2025-09-04 19:05:05,117 - automation.rune_creation - INFO - Added rune position: (1633, 383)
+2025-09-04 19:05:05,118 - gui.main_window - INFO - Successfully added rune position 1: (1633, 383)
+2025-09-04 19:05:05,120 - gui.main_window - INFO - Adding rune position 2: (1633, 383)
+2025-09-04 19:05:05,122 - automation.rune_creation - INFO - Added rune position: (1633, 383)
+2025-09-04 19:05:05,124 - gui.main_window - INFO - Successfully added rune position 2: (1633, 383)
+2025-09-04 19:05:05,125 - gui.main_window - INFO - Adding rune position 3: (1639, 379)
+2025-09-04 19:05:05,128 - automation.rune_creation - INFO - Added rune position: (1639, 379)
+2025-09-04 19:05:05,128 - gui.main_window - INFO - Successfully added rune position 3: (1639, 379)
+2025-09-04 19:05:05,129 - gui.main_window - INFO - Updating rune positions display. Current positions: [(1633, 383), (1633, 383), (1639, 379)]
+2025-09-04 19:05:05,130 - gui.main_window - INFO - Updated display to: Positions: (1633, 383), (1633, 383), (1639, 379) (3/3)
+2025-09-04 19:05:06,575 - core.global_hotkeys - INFO - Global hotkey pressed: f2
+2025-09-04 19:05:06,576 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 19:05:06,576 - gui.main_window - INFO - Testing rune creation logic with 3 positions...
+2025-09-04 19:05:06,576 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 19:05:06,576 - automation.rune_creation - INFO - Starting rune creation sequence...
+2025-09-04 19:05:06,576 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 19:05:06,576 - automation.rune_creation - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 19:05:06,577 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 19:05:06,577 - core.input_simulator - INFO - Ensuring target window focus: 'VMware Workstation'
+2025-09-04 19:05:06,579 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 19:05:06,579 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 19:05:06,785 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 19:05:07,285 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 19:05:07,285 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 19:05:07,286 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 19:05:07,286 - automation.rune_creation - INFO - Blank rune image path: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 19:05:07,286 - automation.rune_creation - INFO - Blank rune image exists: True
+2025-09-04 19:05:07,311 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 19:05:07,311 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 19:05:07,311 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 19:05:07,311 - automation.rune_creation - INFO - Selected target position: (1639, 379)
+2025-09-04 19:05:07,311 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 19:05:07,313 - core.vmware_input_simulator - INFO - VMware click at (1478, 299) with left button, 1 clicks
+2025-09-04 19:05:08,874 - core.vmware_input_simulator - INFO - pyautogui click successful
+2025-09-04 19:05:08,874 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 19:05:09,175 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 19:05:09,175 - automation.rune_creation - INFO - Performing VMware drag and drop from (1478, 299) to (1639, 379)...
+2025-09-04 19:05:09,177 - core.vmware_input_simulator - INFO - VMware drag from (1478, 299) to (1639, 379)
+2025-09-04 19:05:12,500 - core.vmware_input_simulator - INFO - VMware drag successful
+2025-09-04 19:05:14,268 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 19:05:15,570 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 19:05:15,570 - gui.main_window - INFO - Rune creation test completed successfully
+2025-09-04 19:05:15,585 - core.window_focus - INFO - Found partial match: 'Lucas 2 - VMware Workstation' (searching for 'VMware Workstation')
+2025-09-04 19:05:15,585 - core.window_focus - INFO - Bringing window to foreground: 'Lucas 2 - VMware Workstation'
+2025-09-04 19:05:15,787 - core.window_focus - INFO - Successfully brought 'Lucas 2 - VMware Workstation' to foreground
+2025-09-04 19:05:16,288 - core.input_simulator - INFO - Target window focused successfully
+2025-09-04 19:05:16,288 - automation.rune_creation - INFO - Target window focused successfully
+2025-09-04 19:05:16,288 - automation.rune_creation - INFO - Searching for blank rune on screen...
+2025-09-04 19:05:16,288 - automation.rune_creation - INFO - Blank rune image path: C:\Users\Lucas\Desktop\workspace\personal\cyclops\blank.png
+2025-09-04 19:05:16,289 - automation.rune_creation - INFO - Blank rune image exists: True
+2025-09-04 19:05:16,319 - automation.rune_creation - INFO - Blank rune found at relative position Point(x=np.int64(60), y=np.int64(92)), absolute: (1478, 299)
+2025-09-04 19:05:16,319 - automation.rune_creation - INFO - Search region: (1418, 207) - 150x371
+2025-09-04 19:05:16,319 - automation.rune_creation - INFO - Found blank rune at (1478, 299)
+2025-09-04 19:05:16,320 - automation.rune_creation - INFO - Selected target position: (1633, 383)
+2025-09-04 19:05:16,320 - automation.rune_creation - INFO - Clicking on blank rune at (1478, 299) to ensure VM window focus
+2025-09-04 19:05:16,320 - core.vmware_input_simulator - INFO - VMware click at (1478, 299) with left button, 1 clicks
+2025-09-04 19:05:17,896 - core.vmware_input_simulator - INFO - pyautogui click successful
+2025-09-04 19:05:17,896 - automation.rune_creation - INFO - VM focus click result: True
+2025-09-04 19:05:18,198 - automation.rune_creation - INFO - VM focus delay completed, proceeding with drag operation
+2025-09-04 19:05:18,198 - automation.rune_creation - INFO - Performing VMware drag and drop from (1478, 299) to (1633, 383)...
+2025-09-04 19:05:18,198 - core.vmware_input_simulator - INFO - VMware drag from (1478, 299) to (1633, 383)
+2025-09-04 19:05:21,542 - core.vmware_input_simulator - INFO - VMware drag successful
+2025-09-04 19:05:23,307 - automation.rune_creation - INFO - Pressing hotkey: f6
+2025-09-04 19:05:24,609 - automation.rune_creation - INFO - Rune creation sequence completed successfully
+2025-09-04 19:05:24,609 - gui.main_window - INFO - Rune creation test completed successfully

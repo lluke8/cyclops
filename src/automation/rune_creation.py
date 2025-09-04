@@ -11,9 +11,11 @@ from typing import Optional, Tuple, Dict, Any, List
 from core.screen_capture import ScreenCapture
 from core.computer_vision import ComputerVision
 from core.input_simulator import InputSimulator
+from core.vmware_input_simulator import VMwareInputSimulator
 from core.state_monitor import StateMonitor
 from utils.timing import TimingUtils
 from utils.config_manager import ConfigManager
+from utils.resource_loader import get_image_path, find_resource
 
 class RuneCreationAutomation:
     """Rune creation automation with image recognition and position management"""
@@ -41,6 +43,7 @@ class RuneCreationAutomation:
         
         # Get automation configuration
         self.config = self.config_manager.get_automation_config('rune_creation')
+        self.vmware_input_simulator = VMwareInputSimulator(self.config)
         self.is_running = False
         self.creation_count = 0
         self.failure_count = 0
@@ -51,8 +54,11 @@ class RuneCreationAutomation:
         self.max_delay_minutes = self.config.get('max_delay_minutes', 5.0)
         self.next_create_time = 0  # Timestamp for next rune creation
         
-        # Blank rune image path
-        self.blank_rune_path = os.path.join(os.path.dirname(__file__), '..', '..', 'blank.png')
+        # Load rune positions from configuration
+        self._load_rune_positions()
+        
+        # Blank rune image path - use resource path resolver for PyInstaller compatibility
+        self.blank_rune_path = find_resource('blank.png') or get_image_path('blank.png')
         
         # Setup cooldowns
         self.timing.set_cooldown('rune_creation', 2.0)
@@ -207,10 +213,31 @@ class RuneCreationAutomation:
         try:
             self.logger.info("Starting rune creation sequence...")
             
+            # Step 0: Ensure target window is focused (if configured)
+            if self.config.get('window_focus_enabled', True):
+                target_window = self.config.get('target_window_name', '')
+                if target_window:
+                    self.logger.info(f"Ensuring target window focus: '{target_window}'")
+                    if not self.input_simulator.ensure_target_window_focus(target_window, exact_match=False):
+                        self.logger.warning(f"Failed to focus target window '{target_window}', continuing anyway...")
+                    else:
+                        self.logger.info("Target window focused successfully")
+                else:
+                    self.logger.debug("No target window configured, skipping window focus")
+            
             # Step 1: Find blank rune on screen
+            self.logger.info("Searching for blank rune on screen...")
+            self.logger.info(f"Blank rune image path: {self.blank_rune_path}")
+            self.logger.info(f"Blank rune image exists: {os.path.exists(self.blank_rune_path) if self.blank_rune_path else False}")
+            
             blank_rune_location = self._find_blank_rune()
             if not blank_rune_location:
                 self.logger.warning("Could not find blank rune on screen")
+                self.logger.warning("This is why the F2 test stops after window focus!")
+                self.logger.warning("Check if:")
+                self.logger.warning("1. The blank rune image file exists")
+                self.logger.warning("2. The search region is correct")
+                self.logger.warning("3. The blank rune is visible in the search region")
                 return False
             
             blank_x, blank_y = blank_rune_location
@@ -224,20 +251,43 @@ class RuneCreationAutomation:
             target_x, target_y = random.choice(self.rune_positions)
             self.logger.info(f"Selected target position: ({target_x}, {target_y})")
             
-            # Step 3: Perform drag and drop
-            self.logger.info(f"Performing drag and drop from ({blank_x}, {blank_y}) to ({target_x}, {target_y})...")
-            if not self.input_simulator.drag_and_drop(blank_x, blank_y, target_x, target_y, duration=1.0):
-                self.logger.error("Drag and drop failed")
+            # Step 3: Click on blank rune to ensure VM window focus before drag
+            self.logger.info(f"Clicking on blank rune at ({blank_x}, {blank_y}) to ensure VM window focus")
+            click_result = self.vmware_input_simulator.click(blank_x, blank_y)
+            self.logger.info(f"VM focus click result: {click_result}")
+            time.sleep(0.3)  # Wait for VM window to gain focus
+            self.logger.info("VM focus delay completed, proceeding with drag operation")
+
+            # Step 4: Perform drag and drop using VMware-specific method
+            self.logger.info(f"Performing VMware drag and drop from ({blank_x}, {blank_y}) to ({target_x}, {target_y})...")
+            if not self.vmware_input_simulator.drag_and_drop(blank_x, blank_y, target_x, target_y, duration=1.0):
+                self.logger.error("VMware drag and drop failed")
                 return False
             
             # Step 4: Wait for drop to complete
             time.sleep(0.5)
             
-            # Step 5: Press configurable hotkey
+            # Step 5: Ensure game window has focus before pressing hotkey
+            if self.config.get('ensure_focus', True):
+                self._ensure_game_focus()
+            
+            # Step 6: Press configurable hotkey with retry logic
             hotkey = self.config.get('hotkey', 'f6')
             self.logger.info(f"Pressing hotkey: {hotkey}")
-            if not self.input_simulator.press_key(hotkey):
-                self.logger.error("Hotkey press failed")
+            
+            # Try pressing the hotkey with a small retry mechanism
+            hotkey_success = False
+            for attempt in range(2):  # Try up to 2 times
+                if self.input_simulator.press_key(hotkey):
+                    hotkey_success = True
+                    break
+                else:
+                    self.logger.warning(f"Hotkey press attempt {attempt + 1} failed")
+                    if attempt == 0:  # Only wait on first failure
+                        time.sleep(0.2)
+            
+            if not hotkey_success:
+                self.logger.error("Hotkey press failed after retries")
                 return False
             
             # Step 6: Wait for creation to complete
@@ -304,6 +354,20 @@ class RuneCreationAutomation:
             List of (x, y) tuples
         """
         return self.rune_positions.copy()
+    
+    def _load_rune_positions(self):
+        """Load rune positions from configuration"""
+        try:
+            positions = self.config.get('rune_positions', [])
+            if positions:
+                # Convert list of lists to list of tuples
+                self.rune_positions = [tuple(pos) for pos in positions if len(pos) == 2]
+                self.logger.info(f"Loaded {len(self.rune_positions)} rune positions from configuration")
+            else:
+                self.logger.info("No rune positions found in configuration")
+        except Exception as e:
+            self.logger.error(f"Failed to load rune positions: {e}")
+            self.rune_positions = []
     
     def _save_rune_positions(self):
         """Save rune positions to configuration"""
@@ -377,6 +441,48 @@ class RuneCreationAutomation:
         self.creation_count = 0
         self.failure_count = 0
         self.logger.info("Reset rune creation counters")
+    
+    def _ensure_vm_focus_for_drag(self, blank_x: int, blank_y: int):
+        """
+        Ensure the VM window has focus before starting the drag operation.
+        This is critical for VM environments where the window might not be focused.
+        
+        Args:
+            blank_x: X coordinate of the blank rune
+            blank_y: Y coordinate of the blank rune
+        """
+        try:
+            self.logger.debug(f"Ensuring VM window focus at blank rune position ({blank_x}, {blank_y})")
+            
+            # Use the input simulator's VM focus method
+            # This performs double-click for better VM focus handling
+            self.input_simulator.ensure_vm_focus(blank_x, blank_y, double_click=True)
+            
+            self.logger.debug("VM window focus ensured for drag operation")
+                
+        except Exception as e:
+            self.logger.warning(f"Failed to ensure VM focus for drag: {e}")
+            # Don't fail the entire sequence if focus setting fails
+    
+    def _ensure_game_focus(self):
+        """
+        Ensure the game window has focus before pressing hotkeys.
+        This helps ensure that the hotkey press reaches the game application.
+        """
+        try:
+            # Click on the target position to ensure the game window is focused
+            # This is a common technique to bring the game window to the foreground
+            if self.rune_positions:
+                # Use the last target position or a random one
+                target_x, target_y = random.choice(self.rune_positions)
+                self.logger.debug(f"Ensuring game window focus at ({target_x}, {target_y})")
+                
+                # Use the input simulator's focus method
+                self.input_simulator.ensure_window_focus(target_x, target_y)
+                
+        except Exception as e:
+            self.logger.warning(f"Failed to ensure game focus: {e}")
+            # Don't fail the entire sequence if focus setting fails
 
 class RuneCreationError(Exception):
     """Custom exception for rune creation errors"""

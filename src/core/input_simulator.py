@@ -9,6 +9,7 @@ import random
 from typing import Tuple, Optional, List, Union
 import pyautogui
 import keyboard
+from core.window_focus import WindowFocusHandler
 
 class InputSimulator:
     """Input simulation with mouse and keyboard automation"""
@@ -36,6 +37,9 @@ class InputSimulator:
         # Action tracking
         self.last_action_time = {}
         self.action_cooldowns = {}
+        
+        # Window focus handler
+        self.window_focus = WindowFocusHandler()
         
         self.logger.info("Input Simulator initialized")
     
@@ -405,6 +409,132 @@ class InputSimulator:
             self.set_action_cooldown(action_name, cooldown)
         
         return success
+    
+    def ensure_window_focus(self, x: int, y: int) -> bool:
+        """
+        Ensure the window at the specified coordinates has focus by clicking on it
+        
+        Args:
+            x: X coordinate to click
+            y: Y coordinate to click
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            self.logger.debug(f"Ensuring window focus at ({x}, {y})")
+            
+            # Click at the specified position to bring window to focus
+            self.click(x, y)
+            
+            # Small delay to allow focus change
+            time.sleep(0.1)
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to ensure window focus: {e}")
+            return False
+    
+    def ensure_vm_focus(self, x: int, y: int, double_click: bool = True) -> bool:
+        """
+        Ensure VM window has focus by clicking on it (with optional double-click for stubborn VMs)
+        
+        Args:
+            x: X coordinate to click
+            y: Y coordinate to click
+            double_click: Whether to perform double-click for better VM focus
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            self.logger.debug(f"Ensuring VM window focus at ({x}, {y})")
+            
+            # First click to bring VM window to focus
+            self.click(x, y)
+            time.sleep(0.2)
+            
+            # Second click (or double-click) for stubborn VM environments
+            if double_click:
+                self.click(x, y)
+                time.sleep(0.3)
+            else:
+                time.sleep(0.1)
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to ensure VM window focus: {e}")
+            return False
+    
+    def ensure_target_window_focus(self, window_name: str, exact_match: bool = False) -> bool:
+        """
+        Ensure the target window is focused before performing actions
+        
+        Args:
+            window_name: Name or partial name of the target window
+            exact_match: Whether to use exact or partial matching
+            
+        Returns:
+            True if window was focused successfully, False otherwise
+        """
+        try:
+            if not window_name:
+                self.logger.warning("No target window name provided")
+                return False
+            
+            self.logger.info(f"Ensuring target window focus: '{window_name}'")
+            
+            # Find and focus the window
+            success = self.window_focus.ensure_window_focus(window_name, exact_match)
+            
+            if success:
+                # Additional delay to ensure window is fully ready
+                time.sleep(0.5)
+                self.logger.info("Target window focused successfully")
+            else:
+                self.logger.warning(f"Failed to focus target window: '{window_name}'")
+            
+            return success
+            
+        except Exception as e:
+            self.logger.error(f"Failed to ensure target window focus: {e}")
+            return False
+    
+    def get_available_windows(self) -> List[str]:
+        """
+        Get list of available windows for GUI display
+        
+        Returns:
+            List of window titles with process names
+        """
+        try:
+            return self.window_focus.get_window_list()
+        except Exception as e:
+            self.logger.error(f"Failed to get window list: {e}")
+            return []
+    
+    def test_window_focus(self, window_name: str) -> dict:
+        """
+        Test window focus functionality
+        
+        Args:
+            window_name: Name of window to test
+            
+        Returns:
+            Dictionary with test results
+        """
+        try:
+            return self.window_focus.test_window_focus(window_name)
+        except Exception as e:
+            self.logger.error(f"Window focus test failed: {e}")
+            return {
+                'success': False,
+                'message': f"Test failed: {e}",
+                'window_found': False,
+                'window_focused': False
+            }
 
 class InputSimulatorError(Exception):
     """Custom exception for input simulation errors"""

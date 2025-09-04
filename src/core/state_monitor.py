@@ -12,6 +12,7 @@ import numpy as np
 from .screen_capture import ScreenCapture
 from .ocr_engine import OCREngine
 from .computer_vision import ComputerVision
+from utils.resource_loader import find_resource, get_image_path
 
 class StateMonitor:
     """State monitoring with continuous screen analysis and condition checking"""
@@ -228,10 +229,12 @@ class StateMonitor:
                     self.logger.error("Failed to capture search region image")
                     return None
                 
-                # Load the reference image
+                # Load the reference image using resource path resolver
                 try:
                     import cv2
-                    reference = cv2.imread(image_path, cv2.IMREAD_COLOR)
+                    # Use resource path resolver for PyInstaller compatibility
+                    resolved_path = find_resource(image_path) or get_image_path(image_path)
+                    reference = cv2.imread(resolved_path, cv2.IMREAD_COLOR)
                     if reference is None:
                         self.logger.error(f"Could not load reference image: {image_path}")
                         return None
@@ -286,13 +289,15 @@ class StateMonitor:
                 self.logger.error("Failed to capture test region image")
                 return {'success': False, 'error': 'Failed to capture region'}
             
-            # Load the reference image
+            # Load the reference image using resource path resolver
             try:
                 import cv2
-                reference = cv2.imread(image_path, cv2.IMREAD_COLOR)
+                # Use resource path resolver for PyInstaller compatibility
+                resolved_path = find_resource(image_path) or get_image_path(image_path)
+                reference = cv2.imread(resolved_path, cv2.IMREAD_COLOR)
                 if reference is None:
-                    self.logger.error(f"Could not load reference image: {image_path}")
-                    return {'success': False, 'error': f'Could not load {image_path}'}
+                    self.logger.error(f"Could not load reference image: {resolved_path}")
+                    return {'success': False, 'error': f'Could not load {resolved_path}'}
             except Exception as e:
                 self.logger.error(f"Failed to load reference image: {e}")
                 return {'success': False, 'error': str(e)}
