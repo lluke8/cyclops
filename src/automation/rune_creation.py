@@ -213,18 +213,6 @@ class RuneCreationAutomation:
         try:
             self.logger.info("Starting rune creation sequence...")
             
-            # Step 0: Ensure target window is focused (if configured)
-            if self.config.get('window_focus_enabled', True):
-                target_window = self.config.get('target_window_name', '')
-                if target_window:
-                    self.logger.info(f"Ensuring target window focus: '{target_window}'")
-                    if not self.input_simulator.ensure_target_window_focus(target_window, exact_match=False):
-                        self.logger.warning(f"Failed to focus target window '{target_window}', continuing anyway...")
-                    else:
-                        self.logger.info("Target window focused successfully")
-                else:
-                    self.logger.debug("No target window configured, skipping window focus")
-            
             # Step 1: Find blank rune on screen
             self.logger.info("Searching for blank rune on screen...")
             self.logger.info(f"Blank rune image path: {self.blank_rune_path}")
@@ -251,14 +239,7 @@ class RuneCreationAutomation:
             target_x, target_y = random.choice(self.rune_positions)
             self.logger.info(f"Selected target position: ({target_x}, {target_y})")
             
-            # Step 3: Click on blank rune to ensure VM window focus before drag
-            self.logger.info(f"Clicking on blank rune at ({blank_x}, {blank_y}) to ensure VM window focus")
-            click_result = self.vmware_input_simulator.click(blank_x, blank_y)
-            self.logger.info(f"VM focus click result: {click_result}")
-            time.sleep(0.3)  # Wait for VM window to gain focus
-            self.logger.info("VM focus delay completed, proceeding with drag operation")
-
-            # Step 4: Perform drag and drop using VMware-specific method
+            # Step 3: Perform drag and drop using VMware-specific method
             self.logger.info(f"Performing VMware drag and drop from ({blank_x}, {blank_y}) to ({target_x}, {target_y})...")
             if not self.vmware_input_simulator.drag_and_drop(blank_x, blank_y, target_x, target_y, duration=1.0):
                 self.logger.error("VMware drag and drop failed")
@@ -267,11 +248,7 @@ class RuneCreationAutomation:
             # Step 4: Wait for drop to complete
             time.sleep(0.5)
             
-            # Step 5: Ensure game window has focus before pressing hotkey
-            if self.config.get('ensure_focus', True):
-                self._ensure_game_focus()
-            
-            # Step 6: Press configurable hotkey with retry logic
+            # Step 5: Press configurable hotkey with retry logic
             hotkey = self.config.get('hotkey', 'f6')
             self.logger.info(f"Pressing hotkey: {hotkey}")
             
@@ -464,25 +441,6 @@ class RuneCreationAutomation:
             self.logger.warning(f"Failed to ensure VM focus for drag: {e}")
             # Don't fail the entire sequence if focus setting fails
     
-    def _ensure_game_focus(self):
-        """
-        Ensure the game window has focus before pressing hotkeys.
-        This helps ensure that the hotkey press reaches the game application.
-        """
-        try:
-            # Click on the target position to ensure the game window is focused
-            # This is a common technique to bring the game window to the foreground
-            if self.rune_positions:
-                # Use the last target position or a random one
-                target_x, target_y = random.choice(self.rune_positions)
-                self.logger.debug(f"Ensuring game window focus at ({target_x}, {target_y})")
-                
-                # Use the input simulator's focus method
-                self.input_simulator.ensure_window_focus(target_x, target_y)
-                
-        except Exception as e:
-            self.logger.warning(f"Failed to ensure game focus: {e}")
-            # Don't fail the entire sequence if focus setting fails
 
 class RuneCreationError(Exception):
     """Custom exception for rune creation errors"""

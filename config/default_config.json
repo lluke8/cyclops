@@ -60,10 +60,6 @@
       "min_delay_minutes": 2.0,
       "max_delay_minutes": 5.0,
       "hotkey": "f6",
-      "ensure_focus": true,
-      "ensure_vm_focus": true,
-      "target_window_name": "VMware Workstation",
-      "window_focus_enabled": true,
       "search_region": {
         "x": 1418,
         "y": 207,

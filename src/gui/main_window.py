@@ -8,6 +8,7 @@ from tkinter import ttk, messagebox, scrolledtext
 import logging
 import threading
 import time
+import os
 from typing import Dict, Any, Optional
 from utils.config_manager import ConfigManager
 from utils.resource_loader import find_resource, get_image_path
@@ -467,48 +468,6 @@ class CyclopsMainWindow:
         ttk.Button(rune_image_frame, text="Select Blank Rune Image", 
                   command=self._select_rune_image).pack(anchor=tk.W, padx=5, pady=2)
         
-        # Window Focus Configuration
-        window_focus_frame = ttk.LabelFrame(rune_config_frame, text="Window Focus")
-        window_focus_frame.pack(fill=tk.X, padx=5, pady=5)
-        
-        # Window focus enabled checkbox
-        self.window_focus_enabled = tk.BooleanVar()
-        self.window_focus_enabled.set(self.config_manager.get('automation.rune_creation.window_focus_enabled', True))
-        ttk.Checkbutton(window_focus_frame, text="Enable Window Focus", 
-                       variable=self.window_focus_enabled,
-                       command=self._update_window_focus_config).pack(anchor=tk.W, padx=5, pady=2)
-        
-        # Target window name input
-        target_window_frame = ttk.Frame(window_focus_frame)
-        target_window_frame.pack(fill=tk.X, padx=5, pady=2)
-        
-        ttk.Label(target_window_frame, text="Target Window Name:").pack(side=tk.LEFT, padx=5)
-        self.target_window_name = tk.StringVar()
-        self.target_window_name.set(self.config_manager.get('automation.rune_creation.target_window_name', ''))
-        self.target_window_entry = ttk.Entry(target_window_frame, textvariable=self.target_window_name, width=30)
-        self.target_window_entry.pack(side=tk.LEFT, padx=5, fill=tk.X, expand=True)
-        
-        # Window selection buttons
-        window_buttons_frame = ttk.Frame(window_focus_frame)
-        window_buttons_frame.pack(fill=tk.X, padx=5, pady=2)
-        
-        ttk.Button(window_buttons_frame, text="Refresh Window List", 
-                  command=self._refresh_window_list).pack(side=tk.LEFT, padx=2)
-        ttk.Button(window_buttons_frame, text="Test Window Focus", 
-                  command=self._test_window_focus).pack(side=tk.LEFT, padx=2)
-        
-        # Available windows list
-        ttk.Label(window_focus_frame, text="Available Windows:").pack(anchor=tk.W, padx=5, pady=(5,0))
-        self.window_listbox = tk.Listbox(window_focus_frame, height=4, font=('Arial', 8))
-        self.window_listbox.pack(fill=tk.X, padx=5, pady=2)
-        self.window_listbox.bind('<Double-Button-1>', self._on_window_selected)
-        
-        # Scrollbar for window list
-        window_scrollbar = ttk.Scrollbar(window_focus_frame, orient=tk.VERTICAL, command=self.window_listbox.yview)
-        self.window_listbox.configure(yscrollcommand=window_scrollbar.set)
-        
-        # Load initial window list
-        self._refresh_window_list()
         
         # Food Eating Configuration
         food_config_frame = ttk.LabelFrame(scrollable_frame, text="Food Eating")
@@ -627,6 +586,10 @@ class CyclopsMainWindow:
         # Health image selection button
         ttk.Button(health_image_frame, text="Select Health Bar Image", 
                   command=self._select_health_image).pack(anchor=tk.W, padx=5, pady=2)
+        
+        # Test health detection button
+        ttk.Button(health_image_frame, text="Test Health Detection", 
+                  command=self._test_health_detection).pack(anchor=tk.W, padx=5, pady=2)
         
         # Save button
         save_button = ttk.Button(scrollable_frame, text="Save Configuration", 
@@ -903,8 +866,6 @@ class CyclopsMainWindow:
             self.config_manager.set('automation.rune_creation.hotkey', self.rune_hotkey.get())
             self.config_manager.set('automation.rune_creation.min_delay_minutes', float(self.rune_min_delay.get()))
             self.config_manager.set('automation.rune_creation.max_delay_minutes', float(self.rune_max_delay.get()))
-            self.config_manager.set('automation.rune_creation.window_focus_enabled', self.window_focus_enabled.get())
-            self.config_manager.set('automation.rune_creation.target_window_name', self.target_window_name.get())
             self.config_manager.set('automation.food_eating.cooldown_seconds', int(self.food_cooldown.get()))
             self.config_manager.set('automation.food_eating.min_clicks', int(self.food_min_clicks.get()))
             self.config_manager.set('automation.food_eating.max_clicks', int(self.food_max_clicks.get()))
@@ -1174,75 +1135,6 @@ class CyclopsMainWindow:
             except Exception as e:
                 self.logger.error(f"Error during shutdown: {e}")
                 self.root.destroy()
-    
-    def _update_window_focus_config(self):
-        """Update window focus configuration"""
-        try:
-            self.config_manager.set('automation.rune_creation.window_focus_enabled', self.window_focus_enabled.get())
-            self.config_manager.set('automation.rune_creation.target_window_name', self.target_window_name.get())
-            self.logger.info(f"Updated window focus config: enabled={self.window_focus_enabled.get()}, window='{self.target_window_name.get()}'")
-        except Exception as e:
-            self.logger.error(f"Failed to update window focus config: {e}")
-    
-    def _refresh_window_list(self):
-        """Refresh the list of available windows"""
-        try:
-            self.logger.info("Refreshing window list...")
-            windows = self.input_simulator.get_available_windows()
-            
-            # Clear current list
-            self.window_listbox.delete(0, tk.END)
-            
-            # Add windows to list
-            for window in windows:
-                self.window_listbox.insert(tk.END, window)
-            
-            self.logger.info(f"Loaded {len(windows)} windows")
-            
-        except Exception as e:
-            self.logger.error(f"Failed to refresh window list: {e}")
-            messagebox.showerror("Error", f"Failed to refresh window list: {e}")
-    
-    def _on_window_selected(self, event):
-        """Handle window selection from listbox"""
-        try:
-            selection = self.window_listbox.curselection()
-            if selection:
-                window_text = self.window_listbox.get(selection[0])
-                # Extract just the window title (before the process name in parentheses)
-                window_title = window_text.split(' (')[0]
-                self.target_window_name.set(window_title)
-                self.logger.info(f"Selected window: {window_title}")
-        except Exception as e:
-            self.logger.error(f"Failed to select window: {e}")
-    
-    def _test_window_focus(self):
-        """Test window focus functionality"""
-        try:
-            window_name = self.target_window_name.get().strip()
-            if not window_name:
-                messagebox.showwarning("No Window Selected", "Please enter a target window name.")
-                return
-            
-            self.logger.info(f"Testing window focus for: '{window_name}'")
-            
-            # Test window focus
-            result = self.input_simulator.test_window_focus(window_name)
-            
-            if result['success']:
-                messagebox.showinfo("Window Focus Test", 
-                                  f"✅ SUCCESS!\n\n"
-                                  f"Window: {result['window_info']['title']}\n"
-                                  f"Process: {result['window_info']['process']}\n"
-                                  f"Size: {result['window_info']['size']}\n\n"
-                                  f"Window was successfully focused!")
-            else:
-                messagebox.showerror("Window Focus Test Failed", 
-                                   f"❌ FAILED!\n\n{result['message']}")
-                
-        except Exception as e:
-            self.logger.error(f"Window focus test failed: {e}")
-            messagebox.showerror("Error", f"Window focus test failed: {e}")
     
     def _update_food_positions_display(self):
         """Update the food positions display"""
@@ -1577,6 +1469,92 @@ class CyclopsMainWindow:
         except Exception as e:
             self.logger.error(f"Rune detection test failed: {e}")
             messagebox.showerror("Test Failed", f"Detection test failed: {e}")
+    
+    def _test_health_detection(self):
+        """Test health reference detection manually"""
+        try:
+            self.logger.info("Testing health reference detection...")
+            
+            # Get health monitoring automation
+            health_automation = self.workflow_manager.get_automation('health_monitor')
+            if not health_automation:
+                self.logger.error("Health monitoring automation not available")
+                messagebox.showerror("Test Failed", "Health monitoring automation not available")
+                return
+            
+            # Get health region from config
+            health_region = self.config_manager.get('automation.health_monitoring.health_bar_region', {'x': 50, 'y': 50, 'width': 200, 'height': 20})
+            region_tuple = (health_region['x'], health_region['y'], health_region['width'], health_region['height'])
+            
+            # Get health reference image path
+            health_image_path = self.config_manager.get('automation.health_monitoring.health_bar_image', 'health_reference.png')
+            resolved_health_path = find_resource(health_image_path) or get_image_path(health_image_path)
+            
+            if not resolved_health_path or not os.path.exists(resolved_health_path):
+                self.logger.error(f"Health reference image not found: {resolved_health_path}")
+                messagebox.showerror("Test Failed", 
+                                   f"Health reference image not found:\n{resolved_health_path}\n\n"
+                                   "Please select a valid health reference image first.")
+                return
+            
+            # Use computer vision to search for health reference in the region
+            self.logger.info(f"Searching for health reference in region: {region_tuple}")
+            self.logger.info(f"Using health reference image: {resolved_health_path}")
+            
+            # Capture the health region
+            health_image = self.screen_capture.capture_region(*region_tuple)
+            if health_image is None:
+                self.logger.error("Failed to capture health region")
+                messagebox.showerror("Test Failed", "Failed to capture health region")
+                return
+            
+            # Search for the health reference image using OpenCV for confidence
+            import cv2
+            import numpy as np
+            
+            # Load template image
+            template = cv2.imread(resolved_health_path)
+            if template is None:
+                self.logger.error(f"Failed to load template image: {resolved_health_path}")
+                messagebox.showerror("Test Failed", f"Failed to load template image: {resolved_health_path}")
+                return
+            
+            # health_image is already in BGR format from screen_capture
+            health_bgr = health_image
+            
+            # Perform template matching
+            result = cv2.matchTemplate(health_bgr, template, cv2.TM_CCOEFF_NORMED)
+            min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+            
+            # Use a confidence threshold of 0.8
+            confidence_threshold = 0.8
+            
+            if max_val >= confidence_threshold:
+                # Calculate center coordinates
+                h, w = template.shape[:2]
+                x = max_loc[0] + w // 2
+                y = max_loc[1] + h // 2
+                confidence = max_val
+                
+                self.logger.info(f"SUCCESS: HEALTH REFERENCE FOUND at ({x}, {y}) with confidence {confidence:.3f}")
+                messagebox.showinfo("Detection Test", 
+                                  f"SUCCESS: HEALTH REFERENCE FOUND\n"
+                                  f"Location: ({x}, {y})\n"
+                                  f"Confidence: {confidence:.3f}")
+            else:
+                self.logger.warning(f"ERROR: HEALTH REFERENCE NOT FOUND (confidence: {max_val:.3f}, threshold: {confidence_threshold})")
+                messagebox.showwarning("Detection Test", 
+                                     f"ERROR: HEALTH REFERENCE NOT FOUND\n"
+                                     f"Confidence: {max_val:.3f} (threshold: {confidence_threshold})\n\n"
+                                     "Check if:\n"
+                                     "• Health region is configured correctly\n"
+                                     "• Health reference image is visible in the region\n"
+                                     "• health_reference.png image file exists\n"
+                                     "• The health bar matches the reference image")
+                
+        except Exception as e:
+            self.logger.error(f"Health detection test failed: {e}")
+            messagebox.showerror("Test Failed", f"Health detection test failed: {e}")
     
     def _select_health_image(self):
         """Open file dialog to select health bar image"""
